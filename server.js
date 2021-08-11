@@ -27,7 +27,7 @@ app.get('/', (req,res) => {
 
 //Welcome Page --> NEED to code form from login that redirects user to welcome
 app.get('/welcome', (req, res) => {
-  res.send("you've reached me")
+  res.render('welcome.ejs')
 })
 
 /////////////////// Start the Server ///////////////////
