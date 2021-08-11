@@ -5,7 +5,7 @@ const rowdy = require('rowdy-logger')
 
 //DB and Models
 const entryController = require('./controllers/entryController.js');
-
+const userController = require('./controllers/userController.js')
 /////////////////// Configuration //////////////////////
 const app = express();
 const PORT = 3000;
@@ -16,6 +16,9 @@ app.set('view engine', 'ejs');
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'))
+
+///////////////////////Controllers//////////////////////
+app.use('/user', userController);
 app.use('/entry', entryController);
 
 
