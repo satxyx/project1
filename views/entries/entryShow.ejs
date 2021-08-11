@@ -9,5 +9,14 @@
 </head>
 <body>
     <h1>Journal Show</h1>
+    <p>The date is <%= singleEntry.date %>.</p>
+    <p>The author is <%= singleEntry.user %> </p>
+    <p>The title is <%= singleEntry.title %> </p>
+    <p>The body is <%= singleEntry.content %> </p>
+    <img src="<%=singleEntry.image%>">
+    <br>
+    <button>
+        <a href = "/entry/<%= singleEntry._id %>">Update Entry</a>
+    </button>
 </body>
 </html>

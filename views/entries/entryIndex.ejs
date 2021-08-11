@@ -9,5 +9,18 @@
 </head>
 <body>
     <h1>Journal Index</h1>
+    <% for (let i =0; i < allEntry.length; i ++) { %>
+        <a href="/entry/<%= allEntry[i]._id %>">
+            <p><%= allEntry[i].title %></p>
+        </a>
+        <br>
+        <button>
+            <a href = "/entry/<%= allEntry[i]._id %>/edit">Edit Entry</a>
+        </button>
+        <br>
+        <form action = "/entry/<%= allEntry[i]._id %>?_method=DELETE" method = "POST"> 
+            <input type = "submit" value = "Delete Entry">
+        </form>
+    <% } %>
 </body>
 </html>

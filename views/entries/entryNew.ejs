@@ -1,5 +1,3 @@
-<!-- here you should see a form to create a new journal entry -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,26 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Journal New</h1>
-    <p>soon there will be a form here</p>
-
-    <form action="POST" action="/entry">
-    <label for="date">date</label>
-    <input type="date" name="date" id="date">
-    </input>
-    <br>
-    <label for="user">user</label>
-    <input type="text" name="user" id="user"></input>
-    <br>
-    <label for="title">title</label>
-    <input type="text" name="title" id="title"></input>
-    <br>
-    <label for="content">content</label>
-    <input type="text" name="content" id="content"></input>
-    <br>
-    <label for="image">image</label>
-    <input type="text" name="image" id="image"></input>
+    <h1>New Journal Entry</h1>
+    <p>This form creates a new journal entry and adds it to our index route</p>
+    <form method="POST" action="/entry">
+        <label for="date">date</label>
+        <input type="date" name="date" id="date"/>
+        <br>
+        <label for="user">user</label>
+        <input type="text" name="user" id="user"/>
+        <br>
+        <label for="title">title</label>
+        <input type="text" name="title" id="title"/>
+        <br>
+        <label for="content">content</label>
+        <input type="text" name="content" id="content"/>
+        <br>
+        <label for="image">image</label>
+        <input type="text" name="image" id="image"/>
+        <br>
+        <input type = "submit" value ="Create Entry"/>
     </form>
-
 </body>
 </html>

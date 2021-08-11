@@ -5,29 +5,68 @@ const router = express.Router();
 //stimulates mongodb database
 const db = require('../models/index.js');
 
-//Index Route --> needs ejs
+//Index Route --> DONE //needs ejs
 router.get('/', (req, res) => {
-    res.render('entries/entryIndex.ejs')
+    db.Entry.find({}, (err, allEntry) => {
+        if (err) return console.log(err);
+        console.log(allEntry)
+        res.render('entries/entryIndex.ejs', {
+            allEntry: allEntry
+        })
+    })
 })
 
-//New Route --> needs ejs, form, and send form to create route
+//New Route --> DONE // needs ejs, form, and send form to create route
 router.get('/new', (req, res) => {
     res.render('entries/entryNew.ejs')
 })
 
-//Show Route --> needs ejs
+//Create Route --> DONE
+router.post('/', (req, res) => {
+  db.Entry.create(req.body, (err, createdEntry) => {
+      if (err) return console.log(err)
+    //   console.log(createdEntry) --> checking ourselves
+      res.redirect('/entry')
+  })
+})
+
+//Show Route --> DONE  //needs ejs
 router.get('/:entryId', (req, res) => {
-    res.render('entries/entryShow.ejs')
+    db.Entry.findById(req.params.entryId, (err, singleEntry) => {
+        if (err) return console.log(err);
+        res.render('entries/entryShow.ejs', {
+            singleEntry: singleEntry
+        })
+    })
 })
 
-//Create Route
-
-//Edit Route --> needs ejs, form, and sends form to update route
+//Edit Route --> DONE //needs ejs, form, and sends form to update route
 router.get('/:entryId/edit', (req, res) => {
-    res.render('entries/entryEdit.ejs')
+    entryId = req.params.entryId
+    db.Entry.findById(entryId, (err, foundEntry) => {
+        if (err) return console.log(err);
+        res.render('entries/entryEdit.ejs', {
+            oneEntry: foundEntry
+        })
+    })
 })
 
-//Update Route --> updated the db data
-//DeleteRoute --> deletes data
+//Update Route --> DONE //updated the db data
+router.put('/:entryId', (req,res) => {
+   db.Entry.findByIdAndUpdate(req.params.entryId, req.body, (err, foundEntry) => {
+       if (err) return console.log(err)
+       res.redirect(`/entry/${req.params.entryId}`)
+   })
+})
+
+
+//DeleteRoute --> DONE //deletes data
+router.delete('/:entryId', (req, res) => {
+    const entryId = req.params.entryId;
+    db.Entry.findByIdAndDelete(entryId, (err) => {
+        if (err) return console.log(err)
+        res.redirect('/entry');
+    })
+})
 
 module.exports = router;
