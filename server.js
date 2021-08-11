@@ -14,7 +14,6 @@ app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'))
 
-
 /////////////////// Start the Server ///////////////////
 // Start our Server
 app.listen(PORT, () => {
