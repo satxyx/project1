@@ -6,7 +6,7 @@ const entrySchema = new mongoose.Schema({
     user: { type: String}, //change to object once we have user model
     title: { type: String, required: true},
     content: { type: String, required: true},
-    image: { type: Image, required: true } //change once we figure out how to upload IMGs
+    image: { type: String, required: true } //change once we figure out how to upload IMGs
     
 })
 
