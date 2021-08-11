@@ -9,6 +9,8 @@
     <title>Document</title>
 </head>
 <body>
+    <%- include('partials/navbar.ejs') %>
+
     <h1>Journal Edit</h1>
     <p>This form edits your data</p>
     <form method="POST" action="/entry/<%= oneEntry._id %>?_method=PUT">
