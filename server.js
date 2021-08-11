@@ -20,3 +20,6 @@ app.listen(PORT, () => {
     console.log(`Our cool ass journal is running on localhost:${PORT} 🚀`);
     rowdyResults.print()
   })
+
+
+//   const db = require('./models/index.js')
