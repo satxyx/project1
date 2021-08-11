@@ -3,6 +3,9 @@ const express = require('express');
 const methodOverride = require('method-override');
 const rowdy = require('rowdy-logger')
 
+//DB and Models
+const entryController = require('./controllers/entryController.js');
+
 /////////////////// Configuration //////////////////////
 const app = express();
 const PORT = 3000;
@@ -13,6 +16,7 @@ app.set('view engine', 'ejs');
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'))
+app.use('/entry', entryController);
 
 
 /////////////////////////Routes/////////////////////////
