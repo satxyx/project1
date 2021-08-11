@@ -42,12 +42,22 @@ router.get('/:entryId', (req, res) => {
 
 //Edit Route --> needs ejs, form, and sends form to update route
 router.get('/:entryId/edit', (req, res) => {
-    res.render('entries/entryEdit.ejs')
+    entryId = req.params.EntryId
+    db.Entry.findById(entryId, (err, foundEntry) => {
+        if (err) return console.log(err);
+        res.render('entries/entryEdit.ejs', {
+            foundEntry: foundEntry
+        })
+    })
 })
 
 //Update Route --> updated the db data
+router.put('/:entryId', (req,res) => {
+    console.log("you hit the update route.")
+})
 
-//DeleteRoute --> deletes data
+
+//DeleteRoute --> DONE //deletes data
 router.delete('/:entryId', (req, res) => {
     const entryId = req.params.entryId;
     db.Entry.findByIdAndDelete(entryId, (err) => {

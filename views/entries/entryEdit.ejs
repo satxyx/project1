@@ -10,6 +10,24 @@
 </head>
 <body>
     <h1>Journal Edit</h1>
-    <p>soon there will be a form here</p>
+    <p>This form edits your data</p>
+    <form method="POST" action="/entry/<%= foundEntry._id %>?_method=PUT">
+        <label for="date">date</label>
+        <input type="date" name="date" id="date" value="<%= foundEntry.date %>"/>
+        <br>
+        <label for="user">user</label>
+        <input type="text" name="user" id="user" value="<%= foundEntry.user %>"/>
+        <br>
+        <label for="title">title</label>
+        <input type="text" name="title" id="title" value="<%= foundEntry.title %>"/>
+        <br>
+        <label for="content">content</label>
+        <input type="text" name="content" id="content" value="<%= foundEntry.content %>"/>
+        <br>
+        <label for="image">image</label>
+        <input type="text" name="image" id="image" value="<%= foundEntry.image %>"/>
+        <br>
+        <input type = "submit" value ="Update Entry"/>
+    </form>
 </body>
 </html>
