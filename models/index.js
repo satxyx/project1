@@ -16,7 +16,6 @@ mongoose.connect(connectionString, {
 
   // Making the Entry model available from this file
   module.exports = {
-      Entry: require('./Entry.js')
+      Entry: require('./Entry.js'),
+      User: require('./User.js')
   }
-
-  

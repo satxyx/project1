@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
+    <%- include('../../partials/navbar.ejs') %>
+
     <h1>Journal Index</h1>
     <% for (let i =0; i < allEntry.length; i ++) { %>
         <a href="/entry/<%= allEntry[i]._id %>">
