@@ -5,7 +5,7 @@ const router = express.Router();
 //stimulates mongodb database
 const db = require('../models/index.js');
 
-//Index Route --> needs ejs
+//Index Route --> DONE //needs ejs
 router.get('/', (req, res) => {
     db.Entry.find({}, (err, allEntry) => {
         if (err) return console.log(err);
@@ -32,7 +32,12 @@ router.post('/', (req, res) => {
 
 //Show Route --> needs ejs
 router.get('/:entryId', (req, res) => {
-    res.render('entries/entryShow.ejs')
+    db.Entry.findById(req.params.entryId, (err, singleEntry) => {
+        if (err) return console.log(entry);
+        res.render('entries/entryShow.ejs', {
+            singleEntry: singleEntry
+        })
+    })
 })
 
 //Edit Route --> needs ejs, form, and sends form to update route
