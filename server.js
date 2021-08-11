@@ -38,4 +38,4 @@ app.listen(PORT, () => {
   })
 
 
-//   const db = require('./models/index.js')
+//   This is so stupid

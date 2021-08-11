@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
   })
 })
 
-//Show Route --> needs ejs
+//Show Route --> DONE  //needs ejs
 router.get('/:entryId', (req, res) => {
     db.Entry.findById(req.params.entryId, (err, singleEntry) => {
         if (err) return console.log(err);
@@ -40,7 +40,7 @@ router.get('/:entryId', (req, res) => {
     })
 })
 
-//Edit Route --> needs ejs, form, and sends form to update route
+//Edit Route --> DONE //needs ejs, form, and sends form to update route
 router.get('/:entryId/edit', (req, res) => {
     entryId = req.params.entryId
     db.Entry.findById(entryId, (err, foundEntry) => {
@@ -51,7 +51,7 @@ router.get('/:entryId/edit', (req, res) => {
     })
 })
 
-//Update Route --> updated the db data
+//Update Route --> DONE //updated the db data
 router.put('/:entryId', (req,res) => {
    db.Entry.findByIdAndUpdate(req.params.entryId, req.body, (err, foundEntry) => {
        if (err) return console.log(err)
