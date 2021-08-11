@@ -46,6 +46,14 @@ router.get('/:entryId/edit', (req, res) => {
 })
 
 //Update Route --> updated the db data
+
 //DeleteRoute --> deletes data
+router.delete('/:entryId', (req, res) => {
+    const entryId = req.params.entryId;
+    db.Entry.findByIdAndDelete(entryId, (err) => {
+        if (err) return console.log(err)
+        res.redirect('/entry');
+    })
+})
 
 module.exports = router;
