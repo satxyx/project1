@@ -5,7 +5,9 @@ const rowdy = require('rowdy-logger')
 
 //DB and Models
 const entryController = require('./controllers/entryController.js');
-const userController = require('./controllers/userController.js')
+const userController = require('./controllers/userController.js');
+const db = require('./models/index.js');
+
 /////////////////// Configuration //////////////////////
 const app = express();
 const PORT = 3000;
@@ -25,12 +27,13 @@ app.use('/entry', entryController);
 /////////////////////////Routes/////////////////////////
 //Login Page --> will need to route user to welcome page
 app.get('/', (req,res) => {
-  res.render('login.ejs')
-})
-
-//Welcome Page --> NEED to code form from login that redirects user to welcome
-app.get('/welcome', (req, res) => {
-  res.render('welcome.ejs')
+  db.User.find({}, (err, allUsers) => {
+    console.log(allUsers)
+    if (err) return console.log(err)
+    res.render('login.ejs', {
+        allUsers: allUsers
+    })
+  })
 })
 
 /////////////////// Start the Server ///////////////////
