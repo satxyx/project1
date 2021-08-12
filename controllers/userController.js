@@ -4,20 +4,22 @@ const router = express.Router();
 
 const db = require('../models/index.js');
 
-//Index Route
+//Index Route --> DONEish **needs work
 router.get ('/', (req, res) => {
     db.User.find({}, (err, userInfo) => {
         if (err) return console.log(err)
-        res.render('users/userIndex-WelcomePage.ejs', {
+        res.render('users/userIndex.ejs', {
             userInfo: userInfo
         })
     })
 })
-//New Route
+
+//New Route --> DONE
 router.get('/new', (req, res) => {
-    res.render('users/userNew-SignUpPage.ejs')
+    res.render('users/userNew.ejs')
 })
-//Create route
+
+//Create route --> DONEish --> where does this get sent to? 
 router.post("/", (req, res) => {
     console.log(req.body)
     db.User.create(req.body, (err, createdUser) => {
@@ -26,10 +28,15 @@ router.post("/", (req, res) => {
     })
 })
 
-
 //Show Route
 router.get('/:userId', (req, res) => {
-    res.send("See a single one of me")
+    let userId = req.params.userId
+    db.User.findById(userId, (err, singleUser) => {
+        if (err) return console.log(err)
+        res.render('users/userShow.ejs', {
+            singleUser: singleUser
+        })
+    })
 })
 
 //Edit Route
