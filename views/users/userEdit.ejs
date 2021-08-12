@@ -9,5 +9,26 @@
 <body>
     <h1>Profile Update</h1>
     <p>this will have a pre-filled form to edit your user choices</p>
+    <form>
+        <label for= "userName">Username: </label>
+        <input type = "text" id="userName" name="userName" value = />
+        <br>
+        <label for = "firstName">First Name: </label>
+        <input type = "text" id = "firstName" name = "firstName" value = <%= singleUser.firstname %> /> 
+        <br>
+        <label for = "lastName">Last Name: </label>
+        <input type = "text" id = "lastname" name = "lastName" value = <%= singleUser.lastName %>/>
+        <br>
+        <label for = "password"> Password: </label>
+        <input type = "text" id = "password" name = "password" value = <%= singleUser.password %>/>
+        <br>
+        <label for = "theme"> Chose a Theme: </label>
+        <input type ="number" id = "theme" name = "theme" value = <%= singleUser.theme %>/>
+        <br>
+        <label for = "avatarImage"> Add An Avatar Image: </label>
+        <input type = "string" id = "avatar" name = "avatarImage" value = <%= singleUser.avatarImage %>/>
+        <br>
+        <input type = "submit" value = "Update My Profile"/>
+    </form>
 </body>
 </html>

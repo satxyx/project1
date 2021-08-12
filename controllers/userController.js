@@ -5,6 +5,7 @@ const router = express.Router();
 const db = require('../models/index.js');
 
 //Index Route --> DONEish **needs work
+//will we actually have to find by id to make it user specific??
 router.get ('/', (req, res) => {
     db.User.find({}, (err, userInfo) => {
         if (err) return console.log(err)
@@ -14,7 +15,7 @@ router.get ('/', (req, res) => {
     })
 })
 
-//New Route --> DONE
+//New Route --> DONE ...for now?
 router.get('/new', (req, res) => {
     res.render('users/userNew.ejs')
 })
@@ -28,7 +29,7 @@ router.post("/", (req, res) => {
     })
 })
 
-//Show Route
+//Show Route --> DONEish
 router.get('/:userId', (req, res) => {
     let userId = req.params.userId
     db.User.findById(userId, (err, singleUser) => {
@@ -41,7 +42,12 @@ router.get('/:userId', (req, res) => {
 
 //Edit Route
 router.get('/:userId/edit', (req, res) => {
-    res.send("edit me")
+    db.User.findById(req.params.userId, (err, editUser) => {
+        if (err) return console.log(err)
+        res.render('users/userEdit.ejs', {
+            singleUser: editUser
+        })
+    })
 })
 
 //Update Route

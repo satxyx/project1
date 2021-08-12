@@ -8,12 +8,13 @@
 </head>
 <body>
     <h1> <%=singleUser.firstName%> <%=singleUser.lastName%>  </h1>
-    <img src="<%= singleUser.avatarImage %>" alt = "Avatar Image">
+    <!-- <img src="<%= singleUser.avatarImage %>" alt = "Avatar Image"> -->
     <p>Username: <%= singleUser.userName %></p>
     <p>First Name: <%= singleUser.firstName %></p>
     <p>Last Name: <%= singleUser.lastName %></p>
     <p>Password: <%= singleUser.password %></p>
     <p>Theme: <%= singleUser.theme %></p>
     <button><a href = "/user/<%= singleUser._id %>/edit">Update Your Profile</a></button>
+    <!-- we could do fun delete profile button that says you can't lmao -->
 </body>
 </html>
