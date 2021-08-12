@@ -8,7 +8,7 @@ const entryController = require('./controllers/entryController.js');
 const userController = require('./controllers/userController.js')
 /////////////////// Configuration //////////////////////
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 const rowdyResults = rowdy.begin(app)
 app.set('view engine', 'ejs');
 
