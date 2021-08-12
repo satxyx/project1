@@ -51,6 +51,13 @@ router.get('/:userId/edit', (req, res) => {
 })
 
 //Update Route
+router.put('/:userId', (req, res) => {
+    db.User.findByIdAndUpdate(req.params.userId, req.body, (err, updatedUser) => {
+        // console.log(updatedUser)
+        if (err) console.log(err)
+        res.redirect(`/user/${req.params.userId}`)
+    })
+})
 
 //Delete Route
 
