@@ -8,6 +8,12 @@
 </head>
 <body>
     <h1> <%=singleUser.firstName%> <%=singleUser.lastName%>  </h1>
-    <p>Eventually this will have your avatar, and all your other user info!</p>
+    <img src="<%= singleUser.avatarImage %>" alt = "Avatar Image">
+    <p>Username: <%= singleUser.userName %></p>
+    <p>First Name: <%= singleUser.firstName %></p>
+    <p>Last Name: <%= singleUser.lastName %></p>
+    <p>Password: <%= singleUser.password %></p>
+    <p>Theme: <%= singleUser.theme %></p>
+    <button><a href = "/user/<%= singleUser._id %>/edit">Update Your Profile</a></button>
 </body>
 </html>
