@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
-        <!-- Need to come back to update the settings button to link to user update, and populate the "user" greeting with user name value -->
+    <link rel="stylesheet" href="../style.css">
+
+
+<!-- Need to come back to update the settings button to link to user update, and populate the "user" greeting with user name value -->
 </head>
 <%- include('../../partials/navbar.ejs') %>
 
@@ -13,6 +16,16 @@
     <% for (let i  = 0; i < userInfo.length; i++) { %>
         <h1>Welcome <%= userInfo[i].userName %> </h1>
    <% } %>
+
+   <div class="container">
+    <div id="quote">
+        Don't forget: life is a race, if you don't run fast, you'll get trampled
+    </div>
+    <div id="author">
+       - Anonymous
+    </div>
+</div>
+
     <br>
     <p>inspirational quote Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Saepe voluptas asperiores odio excepturi, culpa quod. Similique incidunt 
@@ -25,5 +38,8 @@
 <% for (let i  = 0; i < userInfo.length; i++) { %>
     <a href="/user/<%= userInfo[i]._id %> "><button>Settings</button></a>
 <% } %>
+
+<script type="text/javascript" src="app.js"></script>
+
 </body>
 </html>
