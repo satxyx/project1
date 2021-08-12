@@ -6,6 +6,8 @@ const db = require('../models/index.js');
 
 //Index Route --> DONEish **needs work
 //will we actually have to find by id to make it user specific??
+//will eventually get rid of
+
 router.get ('/', (req, res) => {
     db.User.find({}, (err, userInfo) => {
         if (err) return console.log(err)
