@@ -28,10 +28,9 @@ app.use('/entry', entryController);
 //Login Page --> will need to route user to welcome page
 app.get('/', (req,res) => {
   db.User.find({}, (err, allUsers) => {
-    console.log(allUsers)
     if (err) return console.log(err)
     res.render('login.ejs', {
-        allUsers: allUsers
+      allUsers: allUsers
     })
   })
 })

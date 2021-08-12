@@ -14,7 +14,11 @@
     <h1>You've reached the login page</h1>
     <h2>Select a user below to get started</h2>
        <% for (let i= 0; i < allUsers.length; i++) { %>
-            <button> <a href = "/user"> <%= allUsers[i].userName %> </a></button> 
+            <button> 
+                <a href = "/user/<%= allUsers[i]._id %>"> 
+                    <%= allUsers[i].userName %> 
+                </a>
+            </button> 
             <br>
             <br>
             <%  } %>

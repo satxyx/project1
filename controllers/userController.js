@@ -9,38 +9,50 @@ const db = require('../models/index.js');
 //will eventually get rid of
 
 router.get ('/', (req, res) => {
-    db.User.find({}, (err, userInfo) => {
-        if (err) return console.log(err)
-        res.render('users/userIndex.ejs', {
-            userInfo: userInfo
-        })
+    res.send("Idk man")
+    // db.User.find({}, (err, userInfo) => {
+    //     if (err) return console.log(err)
+    //     res.render('users/userIndex.ejs', {
+        //         userInfo: userInfo
+        //     })
+        // })
     })
-})
 
 //New Route --> DONE ...for now?
-router.get('/new', (req, res) => {
-    res.render('users/userNew.ejs')
-})
-
-//Create route --> DONEish --> where does this get sent to? 
-router.post("/", (req, res) => {
-    // console.log(req.body)
-    db.User.create(req.body, (err, createdUser) => {
-        if (err) return console.log(err)
+    router.get('/new', (req, res) => {
+        res.render('users/userNew.ejs')
     })
-    res.redirect('/')
-})
+    
+//Create route --> DONEish --> where does this get sent to? 
+    router.post("/", (req, res) => {
+        // console.log(req.body)
+        db.User.create(req.body, (err, createdUser) => {
+            if (err) return console.log(err)
+        })
+        res.redirect('/')
+    })
 
 //Show Route --> DONEish
-router.get('/:userId', (req, res) => {
-    let userId = req.params.userId
-    db.User.findById(userId, (err, singleUser) => {
-        if (err) return console.log(err)
-        res.render('users/userShow.ejs', {
-            singleUser: singleUser
+    router.get('/:userId', (req, res) => {
+        let userId = req.params.userId
+        db.User.findById(userId, (err, singleUser) => {
+            if (err) return console.log(err)
+            res.render('users/userShow.ejs', {
+                singleUser: singleUser
+            })
         })
     })
-})
+
+//takes you to the user profile
+    router.get('/profile/:userId', (req, res) => {
+        let userId = req.params.userId
+        db.User.findById(userId, (err, singleUser) => {
+            if (err) return console.log(err)
+            res.render('users/userProfile.ejs', {
+                singleUser: singleUser
+            })
+        })
+    })
 
 //Edit Route
 router.get('/:userId/edit', (req, res) => {
