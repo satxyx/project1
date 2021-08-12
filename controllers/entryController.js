@@ -5,7 +5,7 @@ const router = express.Router();
 //stimulates mongodb database
 const db = require('../models/index.js');
 
-//Index Route --> DONE //needs ejs
+//Index Route --> DONE //needs ejs --> think ahead: only for a particular user
 router.get('/', (req, res) => {
     db.Entry.find({}, (err, allEntry) => {
         if (err) return console.log(err);
