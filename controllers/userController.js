@@ -6,11 +6,16 @@ const db = require('../models/index.js');
 
 //Index Route
 router.get ('/', (req, res) => {
-    res.send("you found me")
+    db.User.find({}, (err, userInfo) => {
+        if (err) return console.log(err)
+        res.render('users/userIndex-WelcomePage.ejs', {
+            userInfo: userInfo
+        })
+    })
 })
 //New Route
 router.get('/new', (req, res) => {
-    res.render('user/userNew-SignUpPage.ejs')
+    res.render('users/userNew-SignUpPage.ejs')
 })
 //Create route
 router.post("/", (req, res) => {
