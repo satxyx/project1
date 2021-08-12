@@ -10,9 +10,17 @@ router.get ('/', (req, res) => {
 })
 //New Route
 router.get('/new', (req, res) => {
-    res.send("you made it to create")
+    res.render('user/userNew-SignUpPage.ejs')
 })
 //Create route
+router.post("/", (req, res) => {
+    console.log(req.body)
+    db.User.create(req.body, (err, createdUser) => {
+        if (err) return console.log(err)
+        res.redirect('/')
+    })
+})
+
 
 //Show Route
 router.get('/:userId', (req, res) => {
