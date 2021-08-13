@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    <%- include('../../partials/navbar.ejs') %>
     <h1>Profile Update</h1>
     <p>Edit your info below</p>
     <form method="POST" action="/user/<%= singleUser._id %>?_method=PUT">
