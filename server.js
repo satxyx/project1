@@ -1,4 +1,5 @@
 /////////////////// Require Statements /////////////////
+require('dotenv').config()
 const express = require('express');
 const methodOverride = require('method-override');
 const rowdy = require('rowdy-logger')
@@ -10,7 +11,7 @@ const db = require('./models/index.js');
 
 /////////////////// Configuration //////////////////////
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 const rowdyResults = rowdy.begin(app)
 app.set('view engine', 'ejs');
 
@@ -37,10 +38,8 @@ app.get('/', (req,res) => {
 
 /////////////////// Start the Server ///////////////////
 // Start our Server
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3001, () => {
     console.log(`Our cool ass journal is running on localhost:${PORT} 🚀`);
     rowdyResults.print()
   })
 
-
-// Salty Satya Tears
