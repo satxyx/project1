@@ -5,20 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/entryshow.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Journal Entry</title>
 </head>
 <body>
-    <%- include('../../partials/navbar.ejs') %>
-
-    <h1>Journal Show</h1>
-    <p>The date is <%= singleEntry.date %>.</p>
-    <p>The author is <%= singleEntry.user %> </p>
-    <p>The title is <%= singleEntry.title %> </p>
-    <p>The body is <%= singleEntry.content %> </p>
-    <img src="<%=singleEntry.image%>">
-    <br>
-    <button>
-        <a href = "/entry/<%= singleEntry._id %>">Update Entry</a>
-    </button>
+    <header>
+        <div>
+            <%- include('../../partials/navbar.ejs') %>
+        </div>
+        <h6><%= singleEntry.date %></h6>
+        <h1><%= singleEntry.title %> </h1>
+    </header>
+    <section>
+        <div class = "content">
+            <p class = "words"><%= singleEntry.content %></p>
+            <br>
+            <div class = "button">
+                <button>
+                    <a href = "/entry/<%= singleEntry._id %>/edit">Update Entry</a>
+                </button>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
