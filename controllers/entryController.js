@@ -9,7 +9,7 @@ const db = require('../models/index.js');
 router.get('/', (req, res) => {
     db.Entry.find({}, (err, allEntry) => {
         if (err) return console.log(err);
-        console.log(allEntry)
+        // console.log(allEntry)
         res.render('entries/entryIndex.ejs', {
             allEntry: allEntry
         })
