@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
-// const connectionString = 'mongodb://localhost:27017/journalapp'
+const connectionString = 'mongodb://localhost:27017/journalapp'
 
 // Fire off the connection to Mongo DB
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -12,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 
 mongoose.connection.on('connected', () => {
-  console.log(`Mongoose connected to ${mongoose.connection.host}:${mongoose.connection.port}`);
+  console.log(`Our cool journal is connected at ${connectionString}`);
 });
 
 mongoose.connection.on("error", (err) => {
