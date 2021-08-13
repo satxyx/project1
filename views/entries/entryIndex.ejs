@@ -7,24 +7,66 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/satyastyle.css">
+
+
+    <style></style>
+
+    <link rel="stylesheet" href="../css/entryindex.css">
+
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+
+    <script src="../JS/slickfile.js" defer></script>
 
 </head>
 <body>
     <%- include('../../partials/navbar.ejs') %>
 
     <h1>Journal Index</h1>
-    <% for (let i =0; i < allEntry.length; i ++) { %>
-        <a href="/entry/<%= allEntry[i]._id %>">
-            <p><%= allEntry[i].title %></p>
-        </a>
-        <br>
-        <button>
-            <a href = "/entry/<%= allEntry[i]._id %>/edit">Edit Entry</a>
-        </button>
-        <br>
-        <form action = "/entry/<%= allEntry[i]._id %>?_method=DELETE" method = "POST"> 
-            <input type = "submit" value = "Delete Entry">
-        </form>
-    <% } %>
+
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="slick">
+                    <% for (let i = 0; i < allEntry.length; i++) { %>
+                    <div class="item">
+                        <div class="bg" style="background-image:url(/img/linus-nylund-JP23z_-dA74-unsplash.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                            <a href="/entry/<%= allEntry[i]._id %>">
+                                <p class="entry-title"><%= allEntry[i].title %></p>
+                            </a>
+                            <a href="/entry/<%= allEntry[i]._id %>">
+                                <p class="entry-content"><%= allEntry[i].content %></p>
+                            </a>
+
+                            <button class="edit-btn">
+                                <a href = "/entry/<%= allEntry[i]._id %>/edit"><img id="edit_icon" src="/img/draw.png" height="40px"></a>
+                            </button>
+                            <br>
+                            <form class="trash-btn" action = "/entry/<%= allEntry[i]._id %>?_method=DELETE" method = "POST">
+                                <input type = "submit" value = "Delete Entry">
+                            </form>
+                        </div>
+
+                    </div>
+                    <% } %>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../slick/slick.min.js"></script>
+
 </body>
 </html>
