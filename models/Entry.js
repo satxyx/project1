@@ -6,12 +6,15 @@ const entrySchema = new mongoose.Schema({
     user: { type: String},
     title: { type: String, required: true},
     content: { type: String, required: true},
-    image: { type: String} //change once we figure out how to upload IMGs
-    
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
+    // image: { type: String} //change once we figure out how to upload IMGs
 })
 
 // Model
 const Entry = mongoose.model('Entry', entrySchema)
 
 // Export
-module.exports = Entry
+module.exports = Entry;
