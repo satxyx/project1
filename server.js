@@ -51,7 +51,7 @@ app.post('/signup', (req, res) => {
     if (err) console.log(err);
     console.log(createdUser);
     // 3. ✅ Redirect to /login
-    res.redirect('/login');
+    res.redirect('/');
   });
 })
 
@@ -66,7 +66,7 @@ app.get('/', (req,res) => {
 app.post('/', (req, res) => {
   console.log(req.body);
   // 1. ✅ Check if the user passed in exists
-  db.User.findOne({ username: req.body.userName }, (err, foundUser) => {
+  db.User.findOne({ userName: req.body.userName }, (err, foundUser) => {
     if (err) return console.log(err);
     // If the username is not correct, send them to the /login page
     if (!foundUser) {
@@ -83,7 +83,7 @@ app.post('/', (req, res) => {
     req.session.currentUser = foundUser;
     console.log(req.session);
     // After successfully logging in go the fruits index page
-    res.redirect('/users/usersShow.ejs');
+    res.redirect(`/user/${req.session.currentUser._id}`);
   })
 })
 

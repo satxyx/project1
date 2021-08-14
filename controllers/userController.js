@@ -8,15 +8,15 @@ const db = require('../models/index.js');
 //will we actually have to find by id to make it user specific??
 //will eventually get rid of
 
-router.get ('/', (req, res) => {
-    res.send("Idk man")
-    // db.User.find({}, (err, userInfo) => {
-    //     if (err) return console.log(err)
-    //     res.render('users/userIndex.ejs', {
-        //         userInfo: userInfo
-        //     })
-        // })
-    })
+// router.get ('/', (req, res) => {
+//     res.send("Idk man")
+//     // db.User.find({}, (err, userInfo) => {
+//     //     if (err) return console.log(err)
+//     //     res.render('users/userIndex.ejs', {
+//         //         userInfo: userInfo
+//         //     })
+//         // })
+//     })
 
 // //New Route --> DONE ...for now?
 //     router.get('/new', (req, res) => {

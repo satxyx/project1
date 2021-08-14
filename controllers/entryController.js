@@ -23,10 +23,20 @@ router.get('/new', (req, res) => {
 
 //Create Route --> DONE
 router.post('/', (req, res) => {
-  db.Entry.create(req.body, (err, createdEntry) => {
-      if (err) return console.log(err)
-    //   console.log(createdEntry) --> checking ourselves
-      res.redirect('/entry')
+    console.log(req.session);
+    req.body.user = req.session.currentUser._id;
+  // 2. Add that new fruit data into our database
+    db.Entry.create(req.body, (err, createdEntry) => {
+        if (err) return console.log(err);
+
+        console.log(createdEntry);
+
+        // 3. Redirect back to fruits index.
+        res.redirect('/entry')
+//   db.Entry.create(req.body, (err, createdEntry) => {
+//       if (err) return console.log(err)
+//     //   console.log(createdEntry) --> checking ourselves
+//       res.redirect('/entry')
   })
 })
 
