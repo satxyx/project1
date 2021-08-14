@@ -18,19 +18,19 @@ router.get ('/', (req, res) => {
         // })
     })
 
-//New Route --> DONE ...for now?
-    router.get('/new', (req, res) => {
-        res.render('users/userNew.ejs')
-    })
+// //New Route --> DONE ...for now?
+//     router.get('/new', (req, res) => {
+//         res.render('users/userNew.ejs')
+//     })
     
-//Create route --> DONEish --> where does this get sent to? 
-    router.post("/", (req, res) => {
-        // console.log(req.body)
-        db.User.create(req.body, (err, createdUser) => {
-            if (err) return console.log(err)
-        })
-        res.redirect('/')
-    })
+// //Create route --> DONEish --> where does this get sent to? 
+//     router.post("/", (req, res) => {
+//         // console.log(req.body)
+//         db.User.create(req.body, (err, createdUser) => {
+//             if (err) return console.log(err)
+//         })
+//         res.redirect('/')
+//     })
 
 //Show Route --> DONEish
     router.get('/:userId', (req, res) => {

@@ -12,19 +12,17 @@
 </head>
 <body>
     <%- include('../partials/navbar.ejs') %>
-<!-- This is where we need to do sessions and the sessions lesson -->
-    <h1>You've reached the login page</h1>
-    <h2>Select a user below to get started</h2>
-       <% for (let i= 0; i < allUsers.length; i++) { %>
-            <button> 
-                <a href = "/user/<%= allUsers[i]._id %>"> 
-                    <%= allUsers[i].userName %> 
-                </a>
-            </button> 
-            <br>
-            <br>
-            <%  } %>
+    <h1>Login to Our App</h1>
+    <form method = "POST" action="/login">
+        <label for= "userName">Username: </label>
+        <input type = "text" id="userName" name="userName"/>
+        <br>
+        <label for = "password"> Password: </label>
+        <input type = "text" id = "password" name = "password"/>
+        <br>
+        <input type = "submit" value = "Login"/>
+    </form>
     <h3>If you need to sign up for our app, click the button below</h3>
-    <button><a href = "/user/new"> Sign Up</a></button>
+    <button><a href = /signup"> Sign Up</a></button>
 </body>
 </html>
