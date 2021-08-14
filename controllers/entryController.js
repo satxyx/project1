@@ -7,7 +7,7 @@ const db = require('../models/index.js');
 
 //Index Route --> DONE //needs ejs --> think ahead: only for a particular user
 router.get('/', (req, res) => {
-    db.Entry.find({}, (err, allEntry) => {
+    db.Entry.find({ user: req.session.currentUser._id }, (err, allEntry) => {
         if (err) return console.log(err);
         // console.log(allEntry)
         res.render('entries/entryIndex.ejs', {
@@ -56,7 +56,7 @@ router.get('/:entryId/edit', (req, res) => {
     db.Entry.findById(entryId, (err, foundEntry) => {
         if (err) return console.log(err);
         res.render('entries/entryEdit.ejs', {
-            oneEntry: foundEntry
+            oneEntry: foundEntry,
         })
     })
 })
