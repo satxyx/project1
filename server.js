@@ -41,6 +41,7 @@ app.get('/signup', (req, res) => {
   res.render('signup.ejs');
 });
 
+
 // Listening for when the signup form is submitted
 // Sign Up a New User
 app.post('/signup', (req, res) => {
@@ -58,6 +59,10 @@ app.post('/signup', (req, res) => {
 //Login Page --> will need to route user to welcome page
 //adjust login form accordingly
 app.get('/', (req,res) => {
+    req.session.newProperty = 'some value'
+
+    console.log(req.session)
+
     res.render('login.ejs')
 })
 
@@ -93,6 +98,7 @@ app.get('/logout', (req, res) => {
   console.log("you're logged out")
   res.redirect('/');
 })
+
 
 /////////////////// Start the Server ///////////////////
 // Start our Server
