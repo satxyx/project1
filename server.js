@@ -38,7 +38,7 @@ app.use('/entry', entryController);
 /////////////////////////Routes/////////////////////////
 // Signup Route - Shows a Signup Form
 app.get('/signup', (req, res) => {
-  res.render('auth/signup.ejs');
+  res.render('signup.ejs');
 });
 
 // Listening for when the signup form is submitted
@@ -55,8 +55,6 @@ app.post('/signup', (req, res) => {
   });
 })
 
-
-
 //Login Page --> will need to route user to welcome page
 //adjust login form accordingly
 app.get('/', (req,res) => {
@@ -68,7 +66,7 @@ app.get('/', (req,res) => {
 app.post('/', (req, res) => {
   console.log(req.body);
   // 1. ✅ Check if the user passed in exists
-  db.User.findOne({ username: req.body.username }, (err, foundUser) => {
+  db.User.findOne({ username: req.body.userName }, (err, foundUser) => {
     if (err) return console.log(err);
     // If the username is not correct, send them to the /login page
     if (!foundUser) {

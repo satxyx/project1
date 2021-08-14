@@ -13,7 +13,7 @@
 <body>
     <%- include('../partials/navbar.ejs') %>
     <h1>Login to Our App</h1>
-    <form method = "POST" action="/login">
+    <form method = "POST" action="/">
         <label for= "userName">Username: </label>
         <input type = "text" id="userName" name="userName"/>
         <br>
@@ -23,6 +23,6 @@
         <input type = "submit" value = "Login"/>
     </form>
     <h3>If you need to sign up for our app, click the button below</h3>
-    <button><a href = /signup"> Sign Up</a></button>
+    <button><a href = "/signup"> Sign Up</a></button>
 </body>
 </html>
