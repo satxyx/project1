@@ -8,22 +8,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="/css/satyastyle.css">
-
+    <!-- <link rel="stylesheet" href="/css/satyastyle.css"> -->
+<link rel="stylesheet" href="css/login.css">
 </head>
 <body>
     <%- include('../partials/navbar.ejs') %>
-    <h1>Login to Our App</h1>
-    <form method = "POST" action="/">
-        <label for= "userName">Username: </label>
-        <input type = "text" id="userName" name="userName"/>
-        <br>
-        <label for = "password"> Password: </label>
-        <input type = "password" id = "password" name = "password"/>
-        <br>
-        <input type = "submit" value = "Login"/>
-    </form>
-    <h3>If you need to sign up for our app, click the button below</h3>
-    <button><a href = "/signup"> Sign Up</a></button>
+
+
+<div class="signup-form-wrapper">
+
+<div class="form-image">
+
+
+        </div>
+
+
+        <form class="signup-form" method = "POST" action="/">
+
+            <h1 class="title">welcome</h1>
+                <p>
+                    please log in our sign up below!
+                </p>
+            
+            <div class=input-field>
+                <input class="input" input type = "text" id="userName" name="userName" placeholder="uername"/>
+            </div>
+            <br><br>
+    
+            <div class=input-field>
+                <!-- <label for = "password"> Password: </label> -->
+                <input class="input" type = "password" id = "password" name = "password" placeholder="password"/>
+            </div>
+            <br><br><br>
+    
+            <div class="action">
+                <input class="button" type = "submit" value = "Login"/>
+                <button class="button" id=btn-sign-up><a href = "/signup"> sign up</a></button>
+            </div>
+    
+            <!-- <button class="sign-up"><a href = "/signup"> Sign Up</a></button> -->
+    
+    
+        </form>
+
+    </div>
+
+</div>    
+
+
 </body>
 </html>

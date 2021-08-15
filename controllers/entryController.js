@@ -56,7 +56,7 @@ router.get('/:entryId/edit', (req, res) => {
     db.Entry.findById(entryId, (err, foundEntry) => {
         if (err) return console.log(err);
         res.render('entries/entryEdit.ejs', {
-            oneEntry: foundEntry,
+            oneEntry: foundEntry
         })
     })
 })
