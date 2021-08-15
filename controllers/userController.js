@@ -34,7 +34,6 @@ const db = require('../models/index.js');
 
 //Show Route --> DONEish
     router.get('/:userId', (req, res) => {
-        console.log(req.session.currentUser.userName)
         let userId = req.params.userId
         db.User.findById(userId, (err, singleUser) => {
             if (err) return console.log(err)
