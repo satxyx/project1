@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const connectionString = 'mongodb://localhost:27017/journalapp'
+const connectionString = process.env.MONGODB_URI || 'mongodb://localhost:27017/journalapp'
 
 // Fire off the connection to Mongo DB
 mongoose.connect(connectionString, {
