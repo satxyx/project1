@@ -52,7 +52,7 @@ input {
 }
 
 #title {
-    width: 50%;
+    width: 80%;
     color: #ECE8E9;
     font-size: 20px;
     font-family: 'Work Sans';
@@ -61,8 +61,8 @@ input {
 }
 
 textarea {
-    width: 50%;
-    height: 600px;
+    width: 90%;
+    height: 800px;
     font-size: 20px;
     background: none;
     color: #ECE8E9;
