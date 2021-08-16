@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>journ.ey</title>
     <link rel="stylesheet" href="/css/nav.css">
-
+    <link rel="stylesheet" href="/css/entrycreate.css">
 </head>
 <body>
     <%- include('../../partials/navbar.ejs') %>
-
-    <h1>New Journal Entry</h1>
-    <p>This form creates a new journal entry and adds it to our index route</p>
-    <form method="POST" action="/entry">
-        <label for="date">date</label>
-        <input type="date" name="date" id="date"/>
-        <br>
-        <label for="title">title</label>
-        <input type="text" name="title" id="title"/>
-        <br>
-        <label for="content">content</label>
-        <input type="text-area" name="content" id="content" width = "200px" height = "200px"/>
-        <!-- <br>
-        <label for="image">image</label>
-        <input type="text" name="image" id="image"/> -->
-        <br>
-        <input type = "submit" value ="Create Entry"/>
+    <header id = "profile-greeting">
+        <h1>what are you thinking about...</h1>
+    </header>
+    <div id = "content-wrapper">
+        <form method="POST" action="/entry">
+            <label for="title">Title</label>
+               <br>
+            <input type="text" name="title" id="title"/>
+            <br>
+            <label for="content">Entry</label>
+            <br>
+            <textarea placeholder = "take your time..." name="content" id="content"></textarea>
+            <!-- <br>
+            <label for="image">image</label>
+            <input type="text" name="image" id="image"/> -->
+            <br>
+    </div>
+    <footer id = footer-wrapper>
+        <div id = "date">
+            <label for="date">Date</label>
+            <br>
+            <input type="date" name="date" id="date"/>
+        </div>
+    </footer>
+    <div id = "submit-button">
+        <input type = "submit" value ="Log Entry"/>
+    </div>
     </form>
 </body>
 </html>

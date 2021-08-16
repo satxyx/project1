@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Homemade+Apple&family=Raleway&display=swap');
+
+body {
+    margin: 100px 0px 0px 0px;
+    padding: 0px;
+    text-align: center;
+    background-image: url('/img/josep-martins-l3-erg8nPRU-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    color:#595147;
+    font-family: 'Raleway'
+}
+
+header {
+    background: #F2DFE280;
+    padding: 20px;
+    font-family: 'Homemade Apple';
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#content-wrapper {
+    background: #26262560;
+    color: #ECE8E9;
+    width: 600px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 24px;
+    font-family: 'Homemade Apple';
+    font-weight: bold;
+}
+
+input {
+    background: none;
+    border-radius: 5px;
+}
+
+#title {
+    width: 50%;
+    color: #ECE8E9;
+}
+
+textarea {
+    width: 50%;
+    height: 300px;
+    background: none;
+    color: #ECE8E9;
+    outline: none;
+    border: 1px inset;
+}
+
+::placeholder {
+    color: #ECE8E9;
+}
+
+#footer-wrapper {
+    background: #F2DFE280;
+    padding: 20px;
+    font-family: 'Homemade Apple';
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+input[type = submit] {
+    color: #ECE8E9;
+    font-size: 20px;
+    font-family: 'Homemade Apple';
+    padding: 0px 50px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    box-shadow: 10px 0px 14px -7px;
+    background: #26262590;
+    
+}
+
+input[type = submit]:hover  {
+    border: 1px solid lightgrey;
+}
