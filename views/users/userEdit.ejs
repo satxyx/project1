@@ -6,32 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Your Profile</title>
     <link rel="stylesheet" href="/css/nav.css">
-
+    <link rel="stylesheet" href="/css/profileedit.css">
 </head>
 <body>
     <%- include('../../partials/navbar.ejs') %>
-    <h1>Profile Update</h1>
-    <p>Edit your info below</p>
-    <form method="POST" action="/user/<%= singleUser._id %>?_method=PUT">
-        <label for= "userName">Username: </label>
-        <input type = "text" id="userName" name="userName" value = "<%= singleUser.userName %>" />
-        <br>
-        <label for = "firstName">First Name: </label>
-        <input type = "text" id = "firstName" name = "firstName" value = "<%= singleUser.firstName %>" /> 
-        <br>
-        <label for = "lastName">Last Name: </label>
-        <input type = "text" id = "lastname" name = "lastName" value = "<%= singleUser.lastName %>"/>
-        <br>
-        <label for = "password"> Password: </label>
-        <input type = "text" id = "password" name = "password" value = "<%= singleUser.password %>"/>
-        <!-- <br> -->
-        <!-- <label for = "theme"> Chose a Theme: </label>
-        <input type ="number" id = "theme" name = "theme" value = "<%= singleUser.theme %>"/> -->
-        <br>
-        <label for = "avatarImage"> Add An Avatar Image: </label>
-        <input type = "string" id = "avatar" name = "avatarImage" value = "<%= singleUser.avatarImage %>"/>
-        <br>
-        <input type = "submit" value = "Update My Profile"/>
-    </form>
+    <div id= "content-wrapper">
+        <header id = "profile-greeting">
+            <h1><%=singleUser.firstName%> <%=singleUser.lastName%>, let's update your profile</h1>
+        </header>
+        <form method="POST" action="/user/<%= singleUser._id %>?_method=PUT">
+            <label for= "userName">Username: </label>
+            <br>
+            <input type = "text" id="userName" name="userName" value = "<%= singleUser.userName %>" />
+            <br>
+            <label for = "firstName">First Name: </label>
+            <br>
+            <input type = "text" id = "firstName" name = "firstName" value = "<%= singleUser.firstName %>" /> 
+            <br>
+            <label for = "lastName">Last Name: </label>
+            <br>
+            <input type = "text" id = "lastname" name = "lastName" value = "<%= singleUser.lastName %>"/>
+            <br>
+            <label for = "password"> Password: </label>
+            <br>
+            <input type = "text" id = "password" name = "password" value = "<%= singleUser.password %>"/>
+            <!-- <br> -->
+            <!-- <label for = "theme"> Chose a Theme: </label>
+            <input type ="number" id = "theme" name = "theme" value = "<%= singleUser.theme %>"/> -->
+            <br>
+            <label for = "avatarImage"> Change Your Avatar Image: </label>
+            <br>
+            <input type = "text" id = "avatar" name = "avatarImage" value = "<%= singleUser.avatarImage %>"/>
+            <br>
+            <input type = "submit" value = "Save Changes"/>
+        </form>
+    </div>
 </body>
 </html>
