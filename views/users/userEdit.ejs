@@ -12,7 +12,7 @@
     <%- include('../../partials/navbar.ejs') %>
     <div id= "content-wrapper">
         <header id = "profile-greeting">
-            <h1><%=singleUser.firstName%> <%=singleUser.lastName%>, let's update your profile</h1>
+            <h1><%=singleUser.firstName%> <%=singleUser.lastName%>,<br> let's update your profile</h1>
         </header>
         <form method="POST" action="/user/<%= singleUser._id %>?_method=PUT">
             <label for= "userName">Username: </label>
