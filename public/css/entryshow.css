@@ -92,3 +92,14 @@ button {
 p {
     color:white;
 }
+
+.trash-btn {
+    height:80px;
+    text-align: right;
+    margin-right: 20px;
+    opacity: .7;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}

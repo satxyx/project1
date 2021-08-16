@@ -29,6 +29,10 @@
                     <a href = "/entry/<%= singleEntry._id %>/edit">Update Entry</a>
                 </button>
             </div>
+            <form class="trash-btn" action = "/entry/<%= singleEntry._id %>?_method=DELETE" method = "POST">
+                <input class="trash-btn" type = image src="/img/trash.png">
+            </form>
+
         </div>
     </section>
 </body>

@@ -32,7 +32,7 @@ body {
 } */
 
 #content-wrapper {
-    background-color: #D2D9D690;
+    /* background-color: #D2D9D690; */
     width: 500px;
     margin: 0 auto;
     border-radius: 10px;
@@ -61,21 +61,22 @@ p {
 }
 
 #title {
-    color: #F25A38;
+    color: grey;
     
 }
 
 #info {
     font-size: 18px;
+
 }
 
 a {
-    color:#F25A38;
+    color: grey;
     text-decoration: none;
 }
 
 a:visited {
-    color: #F25A38;
+    color: grey;
 }
 
 button {
