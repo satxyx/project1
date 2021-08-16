@@ -14,7 +14,7 @@ const db = require('./models/index.js');
 
 /////////////////// Configuration //////////////////////
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001
 const rowdyResults = rowdy.begin(app)
 app.set('view engine', 'ejs');
 
@@ -43,28 +43,28 @@ app.get('/signup', (req, res) => {
 });
 
 
-// Listening for when the signup form is submitted
-// Sign Up a New User
+
 app.post('/signup', (req, res) => {
   console.log(req.body);
   db.User.create(req.body, (err, createdUser) => {
     if (err) console.log(err);
+
     console.log(createdUser);
     res.redirect('/');
   });
 })
 
-//Login Page --> will need to route user to welcome page
-//adjust login form accordingly
+
 app.get('/', (req,res) => {
+    console.log(req.session)
     res.render('login.ejs')
 })
 
-// Listen for when the login form is submitted
-// Log the user in - track the user in a cookie on their browser
+
 app.post('/', (req, res) => {
   console.log(req.body);
   db.User.findOne({ userName: req.body.userName }, (err, foundUser) => {
+
     if (err) return console.log(err);
     if (!foundUser) {
       return res.redirect('/');
@@ -73,6 +73,7 @@ app.post('/', (req, res) => {
       return res.redirect('/');
     }
     req.session.currentUser = foundUser;
+
     console.log(req.session);
     res.redirect(`/user/${req.session.currentUser._id}`);
   })

@@ -10,7 +10,8 @@ router.get('/', (req, res) => {
         if (err) return console.log(err);
         // console.log(allEntry)
         res.render('entries/entryIndex.ejs', {
-            allEntry: allEntry
+            allEntry: allEntry,
+            singleUser: req.session.currentUser._id
         })
     })
 })

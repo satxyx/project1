@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
@@ -10,8 +11,8 @@ body {
     font-family: 'Work Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("/img/03.png");
-	background-size: fill;
+    background-image: url("/img/11.png");
+	  background-size: 130%;
     font-weight: lighter;
 }
 
@@ -30,7 +31,7 @@ p {
 
 .header a {
 	float: left;
-	color: #e56663;
+	color: white;
 	text-align: center;
 	padding-right: 50px;
 	text-decoration: none;
@@ -51,19 +52,22 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
-    height:463px;
+    height:400px;
     display: flex;
     border: none;
     text-align: center;
+
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     border-radius: 10px;
-    
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%);
 }
 
 .signup-form {
     width: 60%;
     background-color: white;
     border-radius: 0px 10px 10px 0px;
+
 
 }
 
@@ -72,10 +76,10 @@ p {
     /* border:#C489B9; */
     border-radius: 10px 0px 0px 10px;
     /* background: #C489B9; */
-    background-image: url('/img/Background-17-1080x1920.jpg');
+    background-image: url('/img/Background-10-1080x1920.jpg');
 
     /* background-image: url("/img/paul-gilmore-d4ljEJRLcVo-unsplash.jpg"); */
-    background-size: 400px;
+    background-size: 300px;
 
     mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(194, 194, 194, 0.2) 100%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(119, 33, 33, 0.3) 0%,rgb(215, 215, 215, 1) 80%);
@@ -109,6 +113,7 @@ p {
       outline: none;
       transition: all .2s;
       border-bottom-right-radius: 4px;
+      padding-right: 10px;
 } 
      focus {
         border-color: #222;
@@ -126,7 +131,7 @@ p {
 
 .title {
 	font-size: 30px;
-    color:#e56663;
+  color:#C489B9;
 	font-family: 'Abril Fatface';
   /* font-family: 'Playfair Display', serif; */
   /* text-align: left; */
@@ -151,22 +156,21 @@ p {
       padding: 18px;
       cursor: pointer;
       text-transform: uppercase;
-      background: #e8e9ec;
-      color: #777;
-      border-bottom-right-radius: 0;
+      background: #C489B9;
+      color: #FFEEEF;
       letter-spacing: 0.2px;
       outline: 0;
       transition: all .3s;
-      border-bottom-right-radius: 4px;
       }
 
       #btn-sign-up {
-        background: #905e7b;
-        color: #FFEEEF;
+        background: #e8e9ec;
+        color: #777;
+        border-radius: 0px 0px 10px 0px;
       }
 
-      a:active, a:hover a:visited {
-        color: #e56663;
+      a:active, a:hover, a:visited {
+        color: #C489B9;
         font-weight: lighter;
         text-decoration: normal;
 
@@ -174,9 +178,9 @@ p {
       }
 
       a {
+        /* color: #C489B9; */
         font-weight: lighter;
         text-decoration: normal;
-
  
       }
 
@@ -187,25 +191,4 @@ p {
         /* text-align: left; */
 
 
-      }
-
-      .header-logo {
-        overflow: hidden;
-        background-color: transparent;
-        padding: 20px 10px;
-        margin-left: 7%;
-        margin-right: 7%;
-          font-size: 16px;
-      }
-      
-      .header-logo a {
-        float: left;
-        color: #e56663;
-        text-align: center;
-        padding-right: 50px;
-        text-decoration: none;
-        font-size: 20px;
-        line-height: 25px;
-        border-radius: 4px;
-        font-weight: bolder;
       }
