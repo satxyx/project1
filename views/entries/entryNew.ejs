@@ -7,6 +7,15 @@
     <title>journ.ey</title>
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/entrycreate.css">
+    <link rel="stylesheet" href="/css/summernote-lite.css">
+    <script src="/JS/summernote-lite.js" defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <link rel="stylesheet" href="/css/texteditor.css">
+
+
 </head>
 <body>
     <%- include('../../partials/navbar.ejs') %>
@@ -21,12 +30,34 @@
             <br>
             <label for="content">Entry</label>
             <br>
-            <textarea placeholder = "take your time..." name="content" id="content"></textarea>
+            <textarea id="summernote" placeholder = "take your time..." name="content" id="content">
+
+            </textarea>
             <!-- <br>
             <label for="image">image</label>
             <input type="text" name="image" id="image"/> -->
             <br>
     </div>
+
+    <script>
+        $('#summernote').summernote({
+          placeholder: 'Hello stand alone ui',
+          tabsize: 2,
+          height: 120,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+          ]
+        });
+      </script>
+
+    <!-- <div id="summernote"></div> -->
+
     <footer id = footer-wrapper>
         <div id = "date">
             <label for="date">Date</label>

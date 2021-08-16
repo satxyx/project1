@@ -33,10 +33,6 @@ router.post('/', (req, res) => {
 
         // 3. Redirect back to fruits index.
         res.redirect('/entry')
-//   db.Entry.create(req.body, (err, createdEntry) => {
-//       if (err) return console.log(err)
-//     //   console.log(createdEntry) --> checking ourselves
-//       res.redirect('/entry')
   })
 })
 

@@ -4,6 +4,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const rowdy = require('rowdy-logger');
 const session = require('express-session');
+const bcrypt = require('bcrypt');
 
 
 //DB and Models
