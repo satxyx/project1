@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Homemade+Apple&family=Raleway&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface:wgth@100;&display=swap');
+
 body {
     margin: 100px 0px 0px 0px;
     padding: 0px;
@@ -8,7 +12,8 @@ body {
     background-position: center;
     background-size: cover;
     color: #03A6A6;
-    font-family: 'Raleway'
+    font-family: 'Work Sans';
+    font-weight: lighter;
 }
 
 /* #empty-wrapper {
@@ -21,8 +26,8 @@ body {
     border-radius: 10px;
     border: 2px solid #F25A3850;
     position: absolute;
-    left: 280px;
-    top: -40px;
+    top: 100px;
+    left:700px;
     z-index: -1 ; 
 } */
 
@@ -32,11 +37,14 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    border-radius: 10px;
 }
 
 /* can def change this font, not in love at all lmao */
 #profile-greeting {
-    font-family: 'Gloria Hallelujah'
+    font-family: 'Abril Fatface';
+    font-weight: lighter;
 }
 
 img {
@@ -80,6 +88,8 @@ button {
     box-shadow: 10px 0px 14px -7px;
     background-image: url('/img/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg');
     background-size: cover;
+    font-family: 'Work Sans';
+    font-weight: lighter;
 }
 
 button:hover {
