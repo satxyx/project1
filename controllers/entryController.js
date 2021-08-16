@@ -11,14 +11,16 @@ router.get('/', (req, res) => {
         // console.log(allEntry)
         res.render('entries/entryIndex.ejs', {
             allEntry: allEntry,
-            singleUser: req.session.currentUser._id
+            oneUser: req.session.currentUser._id
         })
     })
 })
 
 //New Route --> DONE 
 router.get('/new', (req, res) => {
-    res.render('entries/entryNew.ejs')
+    res.render('entries/entryNew.ejs', {
+        oneUser: req.session.currentUser._id
+    })
 })
 
 //Create Route --> DONE
@@ -36,7 +38,8 @@ router.get('/:entryId', (req, res) => {
     db.Entry.findById(req.params.entryId, (err, singleEntry) => {
         if (err) return console.log(err);
         res.render('entries/entryShow.ejs', {
-            singleEntry: singleEntry
+            singleEntry: singleEntry,
+            oneUser: req.session.currentUser._id
         })
     })
 })
@@ -47,7 +50,8 @@ router.get('/:entryId/edit', (req, res) => {
     db.Entry.findById(entryId, (err, foundEntry) => {
         if (err) return console.log(err);
         res.render('entries/entryEdit.ejs', {
-            oneEntry: foundEntry
+            oneEntry: foundEntry,
+            oneUser: req.session.currentUser._id
         })
     })
 })

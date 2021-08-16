@@ -9,7 +9,8 @@ const db = require('../models/index.js');
         db.User.findById(userId, (err, singleUser) => {
             if (err) return console.log(err)
             res.render('users/userShow.ejs', {
-                singleUser: singleUser
+                singleUser: singleUser,
+                oneUser: req.session.currentUser._id
             })
         })
     })
@@ -20,7 +21,8 @@ const db = require('../models/index.js');
         db.User.findById(userId, (err, singleUser) => {
             if (err) return console.log(err)
             res.render('users/userProfile.ejs', {
-                singleUser: singleUser
+                singleUser: singleUser,
+                oneUser: req.session.currentUser._id
             })
         })
     })
@@ -30,7 +32,8 @@ router.get('/:userId/edit', (req, res) => {
     db.User.findById(req.params.userId, (err, editUser) => {
         if (err) return console.log(err)
         res.render('users/userEdit.ejs', {
-            singleUser: editUser
+            singleUser: editUser,
+            oneUser: req.session.currentUser._id
         })
     })
 })
