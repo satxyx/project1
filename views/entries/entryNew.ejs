@@ -9,13 +9,10 @@
     <link rel="stylesheet" href="/css/entrycreate.css">
     <link rel="stylesheet" href="/css/summernote-lite.css">
     <script src="/JS/summernote-lite.js" defer></script>
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <link rel="stylesheet" href="/css/texteditor.css">
-
-
 </head>
 <body>
     <%- include('../../partials/navbar.ejs') %>
@@ -24,24 +21,29 @@
     </header>
     <div id = "content-wrapper">
         <form method="POST" action="/entry">
-            <label for="title">Title</label>
+            <label for="title">title</label>
                <br>
             <input type="text" name="title" id="title"/>
             <br>
-            <label for="content">Entry</label>
+            <label for="content">entry</label>
             <br>
-            <textarea id="summernote" placeholder = "take your time..." name="content" id="content">
-
-            </textarea>
-            <!-- <br>
-            <label for="image">image</label>
-            <input type="text" name="image" id="image"/> -->
+            <textarea id="summernote" name="content"></textarea>
             <br>
     </div>
-
+    <footer id = footer-wrapper>
+        <div id = "date">
+            <label for="date">date</label>
+            <br>
+            <input type="date" name="date" id="date"/>
+        </div>
+    </footer>
+    <div id = "submit-button">
+        <input type = "submit" value ="Log Entry"/>
+    </div>
+    </form>
     <script>
         $('#summernote').summernote({
-          placeholder: 'Hello stand alone ui',
+          placeholder: "take your time...",
           tabsize: 2,
           height: 120,
           toolbar: [
@@ -55,19 +57,5 @@
           ]
         });
       </script>
-
-    <!-- <div id="summernote"></div> -->
-
-    <footer id = footer-wrapper>
-        <div id = "date">
-            <label for="date">Date</label>
-            <br>
-            <input type="date" name="date" id="date"/>
-        </div>
-    </footer>
-    <div id = "submit-button">
-        <input type = "submit" value ="Log Entry"/>
-    </div>
-    </form>
 </body>
 </html>

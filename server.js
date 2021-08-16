@@ -4,7 +4,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const rowdy = require('rowdy-logger');
 const session = require('express-session');
-const bcrypt = require('bcrypt');
+
 
 
 //DB and Models
@@ -46,12 +46,10 @@ app.get('/signup', (req, res) => {
 
 app.post('/signup', (req, res) => {
   console.log(req.body);
-
   db.User.create(req.body, (err, createdUser) => {
     if (err) console.log(err);
 
     console.log(createdUser);
-
     res.redirect('/');
   });
 })
@@ -68,7 +66,6 @@ app.post('/', (req, res) => {
   db.User.findOne({ userName: req.body.userName }, (err, foundUser) => {
 
     if (err) return console.log(err);
-
     if (!foundUser) {
       return res.redirect('/');
     }
@@ -78,7 +75,6 @@ app.post('/', (req, res) => {
     req.session.currentUser = foundUser;
 
     console.log(req.session);
-
     res.redirect(`/user/${req.session.currentUser._id}`);
   })
 })

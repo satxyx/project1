@@ -15,10 +15,14 @@ body {
     color: white;
 }
  
-h1 {
+header {
     margin: 150px 0px;
+}
+
+h1 {
     font-size: 3rem;
     font-family: 'Homemade Apple', 'sans-serif';
+    text-align: center;
 }
 
 a {
@@ -32,12 +36,9 @@ a:visited {
     color: #C7D9D7;
 }
 
-h6 {
-    text-align: right;
-}
-
-h1 {
+h3 {
     text-align: center;
+    font-family: 'Homemade Apple', 'sans-serif';
 }
 
 section {
@@ -95,7 +96,7 @@ p {
 
 .trash-btn {
     height:80px;
-    text-align: right;
+    text-align: center;
     margin-right: 20px;
     opacity: .7;
 }

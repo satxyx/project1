@@ -9,10 +9,10 @@
     background: none;
 }
 
-.note-btn-group {
-    background-color: white;
+.note-btn {
+    margin-top: 20px;
+    background: none;
+    color: white;
+    border: none;
 }
 
-.note-btn {
-    background: white;
-}

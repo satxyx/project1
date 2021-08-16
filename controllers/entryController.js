@@ -1,64 +1,62 @@
-//calling express
 const express = require('express');
 const router = express.Router();
 
 //stimulates mongodb database
 const db = require('../models/index.js');
 
-//Index Route --> DONE //needs ejs --> think ahead: only for a particular user
+//Index Route --> DONE
 router.get('/', (req, res) => {
     db.Entry.find({ user: req.session.currentUser._id }, (err, allEntry) => {
         if (err) return console.log(err);
         // console.log(allEntry)
         res.render('entries/entryIndex.ejs', {
             allEntry: allEntry,
-            singleUser: req.session.currentUser._id
+            oneUser: req.session.currentUser._id
         })
     })
 })
 
-//New Route --> DONE // needs ejs, form, and send form to create route
+//New Route --> DONE 
 router.get('/new', (req, res) => {
-    res.render('entries/entryNew.ejs')
+    res.render('entries/entryNew.ejs', {
+        oneUser: req.session.currentUser._id
+    })
 })
 
 //Create Route --> DONE
 router.post('/', (req, res) => {
     console.log(req.session);
     req.body.user = req.session.currentUser._id;
-  // 2. Add that new fruit data into our database
     db.Entry.create(req.body, (err, createdEntry) => {
         if (err) return console.log(err);
-
-        console.log(createdEntry);
-
-        // 3. Redirect back to fruits index.
         res.redirect('/entry')
   })
 })
 
-//Show Route --> DONE  //needs ejs
+//Show Route --> DONE 
 router.get('/:entryId', (req, res) => {
     db.Entry.findById(req.params.entryId, (err, singleEntry) => {
         if (err) return console.log(err);
         res.render('entries/entryShow.ejs', {
-            singleEntry: singleEntry
+            singleEntry: singleEntry,
+            oneUser: req.session.currentUser._id
         })
     })
 })
 
-//Edit Route --> DONE //needs ejs, form, and sends form to update route
+//Edit Route --> DONE 
 router.get('/:entryId/edit', (req, res) => {
     entryId = req.params.entryId
     db.Entry.findById(entryId, (err, foundEntry) => {
         if (err) return console.log(err);
         res.render('entries/entryEdit.ejs', {
-            oneEntry: foundEntry
+            oneEntry: foundEntry,
+            oneUser: req.session.currentUser._id
         })
     })
 })
 
-//Update Route --> DONE //updated the db data
+//Update Route --> DONE 
 router.put('/:entryId', (req,res) => {
    db.Entry.findByIdAndUpdate(req.params.entryId, req.body, (err, foundEntry) => {
        if (err) return console.log(err)
@@ -67,7 +65,7 @@ router.put('/:entryId', (req,res) => {
 })
 
 
-//DeleteRoute --> DONE //deletes data
+//DeleteRoute --> DONE 
 router.delete('/:entryId', (req, res) => {
     const entryId = req.params.entryId;
     db.Entry.findByIdAndDelete(entryId, (err) => {

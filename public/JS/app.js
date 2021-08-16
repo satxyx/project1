@@ -9,7 +9,7 @@ function generateQuote(){
          return data.json();
     })
     .then(function(data){    
-    document.getElementById("quote").innerHTML = data.content; document.querySelector(".author").innerHTML = "- " + data.author;
+    document.getElementById("quote").innerHTML = data.content;
    })
  .catch(function(err) {
     console.log(err); 

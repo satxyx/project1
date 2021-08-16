@@ -14,15 +14,15 @@
 			<span></span>
 			<span></span>
 			<ul id="menu">
-				<!-- <a href="/user">
-					<li>Home</li> -->
-				<!-- <a class ="menu-text" href="/">
-					<li class="menu-text">Log In</li>
-				</a> -->
-				<a class ="menu-text" href="/user/<%= singleUser._id %>/edit">">
+				<a href="/user/<%=oneUser%>">
+					<li class = "menu-text">Welcome Page</li>
+				</a>
+				<a class ="menu-text" href="/entry">
 					<li class="menu-text">Journal</li>
 				</a>
-
+				<a href="/user/profile/<%=oneUser%>">
+					<li class= "menu-text">Settings</li>
+				</a>
 				<a class ="menu-text" href="/logout">
 					<li class="menu-text">Log Out</li>
 				</a>

@@ -11,29 +11,30 @@
     <link rel="stylesheet" href="/css/entryshow.css">
 
 
-    <title>Journal Entry</title>
+    <title>journ.ey</title>
 </head>
 <body>
     <%- include('../../partials/navbar.ejs') %>
     <header>
-        <div>
-        </div>
-        <h6><%= singleEntry.date %></h6>
+        <% const options1 = { year: 'numeric', month: 'long', day: 'numeric' } %>
+        <% const date1 = singleEntry.date %>
+        <% const dateTimeFormat3 = new Intl.DateTimeFormat('en-US', options1) %>
+        
         <h1><%= singleEntry.title %> </h1>
+        <h3><%= dateTimeFormat3.format(date1) %></h3>
     </header>
     <section>
         <div class = "content">
-            <p class = "words"><%= singleEntry.content %></p>
+            <p class = "words"><%- singleEntry.content %></p>
             <div class = "button">
                 <button>
                     <a href = "/entry/<%= singleEntry._id %>/edit">Update Entry</a>
                 </button>
             </div>
-            <form class="trash-btn" action = "/entry/<%= singleEntry._id %>?_method=DELETE" method = "POST">
-                <input class="trash-btn" type = image src="/img/trash.png">
-            </form>
-
         </div>
+        <form class="trash-btn" action = "/entry/<%= singleEntry._id %>?_method=DELETE" method = "POST">
+            <input class="trash-btn" type = image src="/img/trash.png">
+        </form>
     </section>
 </body>
 </html>

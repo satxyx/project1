@@ -1,15 +1,14 @@
 const mongoose = require('mongoose')
 
-// Schema  -- > ADD BACK IN USER require later
+// Schema
 const entrySchema = new mongoose.Schema({
-    date: { type: Date, required: true }, //change to date once we have date HTML set up
+    date: { type: Date, required: true }, 
     title: { type: String, required: true},
     content: { type: String, required: true},
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     }
-    // image: { type: String} //change once we figure out how to upload IMGs
 })
 
 // Model
