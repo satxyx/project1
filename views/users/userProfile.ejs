@@ -6,30 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
     <link rel="stylesheet" href="/css/nav.css">
-    <link rel="stylesheet" href="/css/profileshow.css">
+    <link rel="stylesheet" href="/css/profile2.css">
+
 </head>
 <body>
     <%- include('../../partials/navbar.ejs') %>
-    <div id = "empty-wrapper">
-        <div id = "blank-pic"></div>
-    </div>
-    <div id = "content-wrapper">
-        <header id = "profile-greeting">
-            <h1> <%=singleUser.firstName%> <%=singleUser.lastName%>,<br> welcome to your profile</h1>
-        </header>
-        <div id = "profile-image">
-            <img src="<%= singleUser.avatarImage %>" alt = "Avatar Image">
-        </div>
-        <div id = "profile-body">
-            <p><span id = "title">Username:</span><br><span id = "info"><%= singleUser.userName %></span></p>
-            <p><span id = "title">First Name:</span><br><span id = "info"><%= singleUser.firstName %></span></p>
-            <p><span id = "title">Last Name:</span><br><span id = "info"><%= singleUser.lastName %></span></p>
-            <p><span id = "title">Password:</span><br><span id = "info"><%= singleUser.password %></span></p>
-        </div>
-        <div id = "update-button"> 
-            <button><a href = "/user/<%= singleUser._id %>/edit">Update Your Profile</a></button>
-        </div>
-    </div>
+
+    <div class="signup-form-wrapper">
+
+        <div class="form-image">
+        
+        
+                </div>
+        
+        
+                <div class="signup-form">
+        
+                    <h1 class="title">welcome, <%=singleUser.firstName%></h1>
+                        <p>
+                            here is your profile!
+                        </p>
+
+                        <div class = "input-field">
+                            <img src="<%= singleUser.avatarImage %>" alt = "Avatar Image">
+                        </div>
+                    
+                    <div class=input-field>
+                        <input class="input"  placeholder="username: <%= singleUser.userName %>"/>
+                    </div>
+                    <br><br>
+            
+                    <div class=input-field>
+                        <!-- <label for = "password"> Password: </label> -->
+                        <input class="input" placeholder="first name: <%= singleUser.firstName %>"/>
+                    </div>
+                    <br><br>
+                    <div class=input-field>
+                        <!-- <label for = "password"> Password: </label> -->
+                        <input class="input" placeholder="password: <%= singleUser.password %>"/>
+                    </div>
+                    <br>
+            
+                    <div class="action">
+                        <button class="button" id=btn-sign-up><a href = "/user/<%= singleUser._id %>/edit"> Update Profile</a></button>
+                    </div>
+            
+                    <!-- <button class="sign-up"><a href = "/signup"> Sign Up</a></button> -->
+            
+            
+                </div>
     <!-- we could do fun delete profile button that says you can't lmao -->
 </body>
 </html>

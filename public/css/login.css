@@ -181,6 +181,7 @@ p {
         /* color: #C489B9; */
         font-weight: lighter;
         text-decoration: normal;
+        color: #C489B9;
  
       }
 
@@ -191,4 +192,24 @@ p {
         /* text-align: left; */
 
 
+      }
+
+      .header-logo {
+        overflow: hidden;
+        background-color: transparent;
+        padding: 20px 10px;
+        margin-left: 7%;
+        margin-right: 7%;
+          font-size: 16px;
+      }
+      
+      .header-logo a {
+        float: left;
+        color: #C489B9;
+        text-align: center;
+        padding-right: 50px;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 25px;
+        border-radius: 4px;
       }

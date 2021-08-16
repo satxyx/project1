@@ -188,3 +188,24 @@ p {
 
 
       }
+
+      .header-logo {
+        overflow: hidden;
+        background-color: transparent;
+        padding: 20px 10px;
+        margin-left: 7%;
+        margin-right: 7%;
+          font-size: 16px;
+      }
+      
+      .header-logo a {
+        float: left;
+        color: #e56663;
+        text-align: center;
+        padding-right: 50px;
+        text-decoration: none;
+        font-size: 20px;
+        line-height: 25px;
+        border-radius: 4px;
+        font-weight: bolder;
+      }
