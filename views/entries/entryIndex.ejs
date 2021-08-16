@@ -12,16 +12,16 @@
 
     <style></style>
 
-    <link rel="stylesheet" href="../css/entryindex.css">
-
-    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
 
+    <link rel="stylesheet" href="../css/entryindex.css">
+
+
     <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+    <!-- this is where the border is styled -->
 
     <script src="../JS/slickfile.js" defer></script>
 
@@ -29,15 +29,14 @@
 <body>
     <%- include('../../partials/navbar.ejs') %>
 
-    <h1>Journal Index</h1>
-
-    <div class="container pt-5">
+    <br><br><br><br>
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="slick">
                     <% for (let i = 0; i < allEntry.length; i++) { %>
                     <div class="item">
-                        <div class="bg" style="background-image:url(/img/linus-nylund-JP23z_-dA74-unsplash.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+                        <div class="bg" style="background-image:url(/img/Foliage-Grainy-Gradient-08.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
                             <a href="/entry/<%= allEntry[i]._id %>">
                                 <p class="entry-title"><%= allEntry[i].title %></p>
                             </a>
@@ -46,7 +45,7 @@
                             </a>
 
                             <button class="edit-btn">
-                                <a href = "/entry/<%= allEntry[i]._id %>/edit"><img id="edit_icon" src="/img/draw.png" height="40px"></a>
+                                <a href = "/entry/<%= allEntry[i]._id %>/edit"><img id="edit_icon" src="/img/draw2.png" height="40px"></a>
                             </button>
                             <br>
                             <form class="trash-btn" action = "/entry/<%= allEntry[i]._id %>?_method=DELETE" method = "POST">
@@ -61,8 +60,8 @@
             </div>
         </div>
     </div>
-
-    <button href="/entry/new">new entry</button>
+<center>
+    <button class="new" href="/entry/new"><a href="/entry/new">new entry</a></button>
 
 
 

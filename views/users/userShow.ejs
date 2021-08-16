@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
+    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/satyastyle.css">
     <link rel="stylesheet" href="/css/homestyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
 
 </head>
 <%- include('../../partials/navbar.ejs') %>
@@ -20,14 +19,11 @@
     
     <body>
     
-        <div class="header">
-            <a class="active logo" href="#home">journ.ey</a>
-    
-            </div>
-        </div>
+
     
         <div id="opening-div">
             <p style="position: absolute; top: 20%; left: 10%; width: 100%; font-size: 15px;">
+                <h1 class="title">hi <%= singleUser.userName %>.</h1>
 
                 <div class="container">
                     <div id="quote">
@@ -35,7 +31,6 @@
                     </div>
                 </div>
             </p>
-            <h1 class="title">hi <%= singleUser.userName %>.</h1>
 
 
             <!-- <p style="font-size: 20px; position: absolute; bottom: 10%;">Explore &#8594;</p> -->
@@ -48,12 +43,14 @@
     
                 </div> -->
             </div>
-            <!-- <p style="position: absolute; right: 35%; top: 93%; width: 100%;">Watch our mission</p> -->
-            <a style="position: absolute; right: 35%; top: 90%; width: 100%;" href="/entry/new"><button>Write</button></a>
-            <a style="position: absolute; right: 35%; top: 120%; width: 100%;" href="/entry"><button>All Entries</button></a>
-            <a style="position: absolute; right: 35%; top: 150%; width: 100%;" href="/user/profile/<%=singleUser._id%>"><button>Settings</button></a>
-        </div>
+            </div>
 
+            <div class="write-div">
+                <a href="/entry/new"><img class="write" src="/img/draw2.png"><p class="links">write</p></a><br>
+                <a href="/entry"><img class="write" src="/img/journal2.png"><p class="links">all entries</p></a><br>
+                <a href="/user/profile/<%=singleUser._id%>"><img class="write" src="/img/settings.png"><p class="links">settings</p></a>
+            <!-- <p style="position: absolute; right: 35%; top: 93%; width: 100%;">Watch our mission</p> -->
+            </div>
         <script type="text/javascript" src="/JS/app.js"></script>
 </body>
 </html>

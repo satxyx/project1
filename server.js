@@ -59,7 +59,6 @@ app.post('/signup', (req, res) => {
 //Login Page --> will need to route user to welcome page
 //adjust login form accordingly
 app.get('/', (req,res) => {
-    req.session.newProperty = 'some value'
 
     console.log(req.session)
 

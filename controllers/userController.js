@@ -38,8 +38,7 @@ const db = require('../models/index.js');
         db.User.findById(userId, (err, singleUser) => {
             if (err) return console.log(err)
             res.render('users/userShow.ejs', {
-                singleUser: singleUser,
-                username: req.session.currentUser._id
+                singleUser: singleUser
             })
         })
     })
@@ -73,9 +72,6 @@ router.put('/:userId', (req, res) => {
         res.redirect(`/user/${req.params.userId}`)
     })
 })
-
-
-
 
 //Delete Route
 
