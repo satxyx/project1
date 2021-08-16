@@ -1,0 +1,19 @@
+.note-editing-area {
+    background-color: none;
+    height:800px;
+    font-size: 30px;
+    color: white;
+}
+
+.note-toolbar {
+    background: none;
+}
+
+
+.note-btn {
+    margin-top: 20px;
+    background: none;
+    color: white;
+    border: none;
+}
+

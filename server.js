@@ -57,9 +57,6 @@ app.post('/signup', (req, res) => {
 //Login Page --> will need to route user to welcome page
 //adjust login form accordingly
 app.get('/', (req,res) => {
-
-    console.log(req.session)
-
     res.render('login.ejs')
 })
 
