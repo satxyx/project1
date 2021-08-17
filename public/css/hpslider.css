@@ -6,7 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 
 
-/* Hamburger Menu */
 body {
 	margin: 0;
 	padding: 0;
@@ -120,7 +119,6 @@ a:hover {
   }
 
 
-/* homepage + slider */
 
   h1, h2 {
 	font-family: 'ABeeZee', sans-serif;
