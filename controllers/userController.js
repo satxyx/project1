@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const alert = require('alert');
 
 const db = require('../models/index.js');
 
