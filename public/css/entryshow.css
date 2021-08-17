@@ -13,6 +13,7 @@ body {
     background-color: rgb(12, 12, 12); 
     font-family: 'Work Sans';
     color: white;
+    background-image: url('/img/099.png');
 }
  
 header {
@@ -21,7 +22,8 @@ header {
 
 h1 {
     font-size: 3rem;
-    font-family: 'Homemade Apple', 'sans-serif';
+    font-family: 'Abril Fatface';
+    font-weight: lighter;
     text-align: center;
 }
 
@@ -38,7 +40,8 @@ a:visited {
 
 h3 {
     text-align: center;
-    font-family: 'Homemade Apple', 'sans-serif';
+    font-family: 'Abril Fatface';
+    font-weight: lighter;;
 }
 
 section {
@@ -46,26 +49,30 @@ section {
     height: 900px;
     background-position: center;
     background-size: cover;
-    background-image: url('/img/usgs-hos3dzgphzw-unsplash.jpeg');
+    background:#b0b8fe;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.9) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.7) 0%,rgba(0,0,0,0.9) 100%);
+ }
+
 
 .content {
-    height: 300px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .words {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Work Sans';
     font-weight: lighter;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
     line-height: 40px;
 }
 
@@ -83,7 +90,7 @@ button {
     /* margin: 20px; */
     border: none;
     border-radius: 25px;
-    background-image: url('/img/usgs-hos3dzgphzw-unsplash.jpeg');
+    background-image: url('/img/099.png');
     background-position: center;
     background-size: cover;
     box-shadow: 1px 1px ;
@@ -95,10 +102,12 @@ p {
 }
 
 .trash-btn {
+    position: absolute;
     height:80px;
-    text-align: center;
-    margin-right: 20px;
     opacity: .7;
+    bottom:0;
+    top:580px;
+    right:20px;
 }
 
 textarea:focus, input:focus{

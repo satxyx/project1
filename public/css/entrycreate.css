@@ -7,7 +7,7 @@ body {
     margin: 100px 0px 0px 0px;
     padding: 0px;
     text-align: center;
-    background-image: url('/img/1.jpg');
+    background-image: url('/img/100.png');
     background-position: center;
     background-size: cover;
     color:white;
@@ -16,27 +16,27 @@ body {
 }
 
 header {
-    background: #fee3c640;
     width: 100%;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.616) 0%,rgba(0,0,0,1) 80%);
-    padding: 20px;
+    padding-top: 50px;
     margin: 0 auto;
     border-radius: 10px;
     font-family: 'Abril Fat face';
     font-size: 1rem;
-    color:#40121d;
+    color:white;
+
 }
 
 #content-wrapper {
-    background: #26262560;
     color: #ECE8E9;
     width: 100%;
     padding: 20px;
     margin: 0 auto;
     border-radius: 10px;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.616) 0%,rgba(0,0,0,1) 80%);
+    background: #2eaf78;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%,rgba(126, 77, 77, 0.4) 80%);
 
 }
 
@@ -54,17 +54,21 @@ input {
 #title {
     width: 80%;
     color: #ECE8E9;
+    background: #ECE8E935;
     font-size: 20px;
     font-family: 'Work Sans';
     font-weight: lighter;
+    border:1px;
+    
 
 }
 
 textarea {
-    width: 90%;
-    height: 800px;
+    width: 100%;
     font-size: 20px;
     background: none;
+    background: #ECE8E935;
+    height:800px;
     color: #ECE8E9;
     outline: none;
     border: 1px inset;
@@ -76,10 +80,10 @@ textarea {
     color: #ECE8E9;
 }
 
+
 #footer-wrapper {
-    background: #260c1999;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.616) 0%,rgba(0,0,0,1) 80%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.12) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%,rgba(0,0,0,.5) 80%);
     padding: 20px;
     width: 100%;
     margin: 0 auto;

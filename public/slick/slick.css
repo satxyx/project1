@@ -195,10 +195,13 @@
     position: absolute;
     right:1;
     bottom:0px;
+    padding-bottom: 12px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 100;
     color:white;
-    /* background:rgba(255, 255, 255, 0.1); */
+    height: 6em; 
+    text-overflow: -o-ellipsis-lastline;
+
 
 }
 
@@ -221,5 +224,7 @@
 button {
     font-family: 'Work Sans', sans-serif;
     opacity: .5;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+
 
 }
