@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-    <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/profile2.css">
+
+    <link rel="stylesheet" href="/css/nav.css">
+
 
 </head>
 <body>
@@ -28,7 +30,7 @@
                         </p>
 
                         <div class = "input-field">
-                            <img src="<%= singleUser.avatarImage %>" alt = "Avatar Image">
+                            <img class="avatar-image" src="<%= singleUser.avatarImage %>" alt = "Avatar Image">
                         </div>
                     
                     <div class=input-field>
@@ -48,7 +50,7 @@
                     <br>
             
                     <div class="action">
-                        <button class="button" id=btn-sign-up><a href = "/user/<%= singleUser._id %>/edit"> Update Profile</a></button>
+                        <button class="button" id=btn-sign-up><a class="a-button" href = "/user/<%= singleUser._id %>/edit"> Update Profile</a></button>
                     </div>
             
                     <!-- <button class="sign-up"><a href = "/signup"> Sign Up</a></button> -->

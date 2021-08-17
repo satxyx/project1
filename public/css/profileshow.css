@@ -96,3 +96,7 @@ button {
 button:hover {
     border: 1px solid lightgrey;
 }
+
+.avatar-image {
+    width: 100px;
+  }
