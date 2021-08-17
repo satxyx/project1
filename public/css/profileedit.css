@@ -16,21 +16,6 @@ body {
     font-weight: lighter;
 }
 
-/* #empty-wrapper {
-    position: relative;
-}
-
-#blank-pic {
-    width: 250px;
-    height: 300px;
-    border-radius: 10px;
-    border: 2px solid #F25A3850;
-    position: absolute;
-    left: 280px;
-    top: -40px;
-    z-index: -1 ; 
-} */
-
 #content-wrapper {
     width: 500px;
     margin: 0 auto;
@@ -40,7 +25,6 @@ body {
 
 }
 
-/* can def change this font, not in love at all lmao */
 #profile-greeting {
     font-family: 'Abril Fatface'
 }
