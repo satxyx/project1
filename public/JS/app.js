@@ -1,7 +1,3 @@
-/////// RANDOM QUOTE GENERATOR ///////
-
-console.log('Hello World!')
-
 const url = "https://api.quotable.io/random";
 function generateQuote(){
    fetch(url)
