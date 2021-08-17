@@ -11,7 +11,7 @@ body {
     font-family: 'Work Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("/img/01.png");
+    background-image: url("/img/06.png");
 	  background-size: 130%;
     font-weight: lighter;
 }
@@ -52,7 +52,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
-    height:555px;
+    height:628px;
     display: flex;
     border: none;
     text-align: center;
@@ -131,7 +131,7 @@ p {
 
 .title {
 	font-size: 30px;
-  color:#C489B9;
+  color:#0c7f98;
 	font-family: 'Abril Fatface';
   /* font-family: 'Playfair Display', serif; */
   /* text-align: left; */
@@ -191,4 +191,12 @@ p {
         /* text-align: left; */
 
 
+      }
+
+      .avatar-image {
+        width: 100px;
+      }
+
+      .a-button {
+        color:#0c7f98;
       }
