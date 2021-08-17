@@ -24,17 +24,11 @@ a {
 	transition: color 0.3s ease;
 }
 
-
-/* homepage + slider */
-
   h1, h2 {
 	font-family: 'Abril Fatface';
 	margin: 10px;
 	letter-spacing: 1px; 
 	font-weight: lighter;
-
-
-	/* margin-right: 10px; */
 }
 
 p {
@@ -42,9 +36,6 @@ p {
 	margin: 10px;
 	letter-spacing: .5px; 
 	font-weight: lighter;
-
-
-
 }
 
 button {

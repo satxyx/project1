@@ -56,7 +56,6 @@ p {
     display: flex;
     border: none;
     text-align: center;
-
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     border-radius: 10px;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
@@ -67,36 +66,18 @@ p {
     width: 60%;
     background-color: white;
     border-radius: 0px 10px 10px 0px;
-
-
 }
 
 .form-image {
     width: 40%;
-    /* border:#C489B9; */
     border-radius: 10px 0px 0px 10px;
-    /* background: #C489B9; */
     background-image: url('/img/Background-13-1080x1920.jpg');
-
-    /* background-image: url("/img/paul-gilmore-d4ljEJRLcVo-unsplash.jpg"); */
     background-size: 400px;
-
     mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(194, 194, 194, 0.2) 100%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(119, 33, 33, 0.3) 0%,rgb(215, 215, 215, 1) 80%);
 }
 
-/* .input {
-    width: 300px;
-    border: 0;
-    color: black;
-    border:10px;
-    border-color: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: grey;
-} */
-
 .input-field {
-
     padding-right: 40px;
     padding-left: 20px;
 }
@@ -133,8 +114,6 @@ p {
 	font-size: 30px;
   color:#0c7f98;
 	font-family: 'Abril Fatface';
-  /* font-family: 'Playfair Display', serif; */
-  /* text-align: left; */
   padding-left: 18px;
   font-weight: lighter;
   letter-spacing: .5px;
@@ -177,19 +156,13 @@ p {
       }
 
       a {
-        /* color: #C489B9; */
         font-weight: lighter;
         text-decoration: normal;
- 
       }
 
       p {
         padding-left: 18px;
         font-weight: lighter;
-
-        /* text-align: left; */
-
-
       }
 
       .avatar-image {
