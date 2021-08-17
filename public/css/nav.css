@@ -107,6 +107,8 @@ a:hover {
 	transform: translate(100%, 0);
 
 	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+	border-radius: 10px;
+
 }
 
 #menu li {
@@ -136,18 +138,16 @@ a:hover {
 
 
 
-.menu-text {
-	color:white;
-}
-
 a {
-	color:#C489B9;
+	color:white;
 	text-decoration: none !important;
-
 }
 
 a:hover, a:visited, a:active {
-	color: #C489B9;
+	color: gray;
 	text-decoration: none !important;
+}
 
+.new {
+	color:rgb(116, 116, 116);
 }
