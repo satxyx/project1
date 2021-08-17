@@ -1,11 +1,7 @@
-
-
-
 body {
 	margin: 0;
 	padding: 0;
-	background: #efefef;
-	color: #333333;
+	color: #ffffff;
     font-family: 'Work Sans', sans-serif;
 	overflow-x: hidden;
 } 
@@ -31,7 +27,7 @@ body {
 }
 
 a:hover {
-	color: #676767;
+	color: #C489B9;
 }
 
 #menuToggle {
@@ -63,7 +59,7 @@ a:hover {
 	height: 4px;
 	margin-bottom: 5px;
 	position: relative;
-	background: #cdcdcd;
+	background: #ffffff;
 	border-radius: 3px;
 	z-index: 1;
 	transform-origin: 4px 0px;
@@ -83,7 +79,7 @@ a:hover {
 #menuToggle input:checked~span {
 	opacity: 1;
 	transform: rotate(45deg) translate(-2px, -1px);
-	background: #232323;
+	background: #ffffff;
 }
 
 #menuToggle input:checked~span:nth-last-child(3) {
@@ -97,13 +93,14 @@ a:hover {
 }
 
 #menu {
+	opacity: 0;
 	position: absolute;
 	width: 300px;
 	margin: -100px 0 0 0;
 	padding: 50px;
 	padding-top: 125px;
 	right: -100px;
-	background: #ededed;
+	background: #ededed80;
 	list-style-type: none;
 	-webkit-font-smoothing: antialiased;
 	transform-origin: 0% 0%;
@@ -129,10 +126,28 @@ a:hover {
 
   #menu-text {
 	text-decoration: none !important;
-	color: #232323;
+	color: #ffffff;
 	transition: color 0.3s ease;
     font-family: 'Work Sans', sans-serif;
     margin: 0;
 	padding: 0;
     overflow-x: hidden;
+}
+
+
+
+.menu-text {
+	color:white;
+}
+
+a {
+	color:#C489B9;
+	text-decoration: none !important;
+
+}
+
+a:hover, a:visited, a:active {
+	color: #C489B9;
+	text-decoration: none !important;
+
 }
