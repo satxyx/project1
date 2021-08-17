@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const alert = require('alert');
 
 const db = require('../models/index.js');
 
@@ -46,7 +47,5 @@ router.put('/:userId', (req, res) => {
         res.redirect(`/user/${req.params.userId}`)
     })
 })
-
-//Delete Route
 
 module.exports = router;

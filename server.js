@@ -5,8 +5,6 @@ const methodOverride = require('method-override');
 const rowdy = require('rowdy-logger');
 const session = require('express-session');
 
-
-
 //DB and Models
 const entryController = require('./controllers/entryController.js');
 const userController = require('./controllers/userController.js');
