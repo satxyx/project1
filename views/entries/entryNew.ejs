@@ -25,7 +25,7 @@
                <br>
             <input type="text" name="title" id="title"/>
             <br>
-            <label for="content">entry</label>
+            <label for="content">thoughts</label>
             <br>
             <textarea id="summernote" name="content"></textarea>
             <br>
@@ -53,32 +53,7 @@
             ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
             ['height', ['height']],
-            ['insert', ['link', 'picture', 'video']],
           ],
-          callbacks: {
-                onImageUpload: function(image) {
-                editor = $(this);
-                uploadImageContent(image[0], editor);
-                }
-            },
-            // function uploadImage(image) {
-            // var data = new FormData();
-            // data.append("image", image);
-            // $.ajax({
-            //     url: "/my_flask_endpoint",
-            //     cache: false,
-            //     contentType: false,
-            //     processData: false,
-            //     data: data,
-            //     type: "POST",
-            //     success: function(filename) {
-            //         var image = $('<img>').attr('src', '/route/to/images/' + filename).addClass("img-fluid");
-            //         $('#summernote').summernote("insertNode", image[0]);
-            //     },
-            //     error: function(data) {
-            //         console.log(data);
-            //     }
-            // })
         });
       </script>
 </body>

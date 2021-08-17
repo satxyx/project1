@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Work+Sans:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-family: 'Abril Fatface';
+}
+
+body {
+    background:url('/img/UnicornVectorGradient_21.jpg');
+    margin: 0px;
+    padding: 0px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.inspiration-board {
+    margin: 50px 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr); 
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 80px;
+}
+
+.pic {
+    height: 200px;
+    width: 200px;
+    border: 1px solid lightgrey;
+    box-shadow: 0px 0px 30px gray;
+}
+
+.pic:hover {
+    transform: scale(1.5);
+}
+
+#one {
+    background-image: url('/img/alex-gruber-RlDMF6DqbtY-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#two {
+    background-image: url('/img/annie-spratt-MvA86_qwpEI-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#three {
+    background-image: url('/img/eileen-pan-5d5DSRQ5dUc-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#four {
+    background-image: url('/img/fabien-bellanger-WecyNoiUgz0-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#five {
+    background-image: url('/img/thought-catalog-IcUbKfIuQ70-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#six {
+    background-image: url('/img/leonardo-sanches-b7naustT-1E-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#seven {
+    background-image: url('/img/nick-fewings-HU-xiyQ-4Oo-unsplash.jpg');
+    background-position: center;
+    background-size: contain;
+}
+
+#eight {
+    background-image: url('/img/prudence-earl-NwBx723XaHw-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#nine {
+    background-image: url('/img/randalyn-hill-Z1HXJQ2aWIA-unsplash.jpg');
+    background-position: center;
+    background-size: contain;
+}
+
+#ten {
+    background-image: url('/img/randy-tarampi-U2eUlPEKIgU-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#eleven {
+    background-image: url('/img/taras-kots-VV2H_Ib3o7s-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#twelve {
+    background-image: url('/img/eli-defaria-TtybI0ORH7w-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+}
