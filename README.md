@@ -1,7 +1,7 @@
 # journ.ey
 We've created a sleek, minimalistic journaling app. One that the user can find daily peace in as they express their thoughts and decompress through thoughtful, written meditation. 
 
-Heroku Link: https://sei-satya-nicole-project-1.herokuapp.com
+Heroku Link: https://nicole-satya-project.herokuapp.com/
 
 ## Technologies Used
 * Trello - project planning
@@ -18,6 +18,15 @@ Heroku Link: https://sei-satya-nicole-project-1.herokuapp.com
 * Envato Elements - picture library
 
 ## WireFrames
+![ERD] (./wireframes/ERD.png) *Relationship Diagram for data*
+![User Sign Up] (./wireframes/SignUp.png) *User signup page*
+![User Login] (./wireframes/LogIn.png) *User login page*
+![User Welcome] (./wireframes/WelcomeUser.png) *Personalized user welcome page*
+![User Settings] (./wireframes/Settings.png) *User settings page*
+![Entry Index] (./wireframes/EntryAll.png) *All journal entries*
+![Entry Show] (./wireframes/EntryShow.png) *Journal entry show page*
+![Entry Create] (./wireframes/CreateEntry.png) *Journal entry create page*
+![Entry Edit] (./wireframes/EditEntry.png) *Journal entry edit page*
 
 ## User Stories
 ### Who is the user?
