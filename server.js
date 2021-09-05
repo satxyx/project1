@@ -77,12 +77,13 @@ app.post('/', (req, res) => {
   })
 })
 
-///Logout Route
+///Logout Route --> destorys the session
 app.get('/logout', (req, res) => {
   req.session.destroy();
   console.log("you're logged out")
   res.redirect('/');
 })
+
 
 
 /////////////////// Start the Server ///////////////////
