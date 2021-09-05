@@ -88,7 +88,7 @@ app.get('/logout', (req, res) => {
 
 /////////////////// Start the Server ///////////////////
 // Start our Server
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Our cool ass journal is running on localhost:${PORT} 🚀`);
     rowdyResults.print()
   })
