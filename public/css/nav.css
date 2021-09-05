@@ -143,8 +143,8 @@ a {
 	text-decoration: none !important;
 }
 
-a:hover, a:visited, a:active {
-	color: gray;
+a:hover{
+	color: #C489B9;
 	text-decoration: none !important;
 }
 

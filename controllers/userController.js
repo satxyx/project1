@@ -3,6 +3,14 @@ const router = express.Router();
 
 const db = require('../models/index.js');
 
+//takes you to a visual inspo page
+router.get('/inspiration', (req, res) => {
+    res.render('users/userInspo.ejs', {
+        oneUser: req.session.currentUser._id
+    });
+});
+
+
 //Show Route --> DONEish
     router.get('/:userId', (req, res) => {
         let userId = req.params.userId
@@ -26,6 +34,7 @@ const db = require('../models/index.js');
             })
         })
     })
+
 
 //Edit Route
 router.get('/:userId/edit', (req, res) => {
