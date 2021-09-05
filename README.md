@@ -19,14 +19,14 @@ Heroku Link: https://nicole-satya-project.herokuapp.com/
 
 ## WireFrames
 ![ERD](./wireframes/ERD.png) *Relationship Diagram for data*
-! [User Sign Up](wireframes/SignUp.png) *User signup page*
-! [User Login](wireframes/LogIn.png) *User login page*
-! [User Welcome](wireframes/WelcomeUser.png) *Personalized user welcome page*
-! [User Settings](wireframes/Settings.png) *User settings page*
-! [Entry Index](wireframes/EntryAll.png) *All journal entries*
-! [Entry Show](wireframes/EntryShow.png) *Journal entry show page*
-! [Entry Create](wireframes/CreateEntry.png) *Journal entry create page*
-! [Entry Edit](wireframes/EditEntry.png) *Journal entry edit page*
+![User Sign Up](wireframes/SignUp.png) *User signup page*
+![User Login](wireframes/LogIn.png) *User login page*
+![User Welcome](wireframes/WelcomeUser.png) *Personalized user welcome page*
+![User Settings](wireframes/Settings.png) *User settings page*
+![Entry Index](wireframes/EntryAll.png) *All journal entries*
+![Entry Show](wireframes/EntryShow.png) *Journal entry show page*
+![Entry Create](wireframes/CreateEntry.png) *Journal entry create page*
+![Entry Edit](wireframes/EditEntry.png) *Journal entry edit page*
 
 ## User Stories
 ### Who is the user?
