@@ -60,8 +60,8 @@ If we continued to work on our project, we'd like to create solutions for the fe
 * User being able to lock specific journal entries
 
 ## Triumphs
-Our triumphs ran both sides of design and functionality with this app. We were able to solve the problem of passing data to our navbar based on which user was signed in and taking them to the correct pages for their account. This allowed the user to be able to navigate freely and easily throught our app. 
-We were able to implement a
+Our triumphs ran both sides of design and functionality with this app. We were able to solve the problem of passing data to our navbar based on which user was signed in and taking them to the correct pages for their account. This allowed the user to be able to navigate freely and easily throught our app without encountering an error from the browser.
+We were also able to implement a slider carousel with Slick and learned how to work with that API to fulfill our purposes. 
 
 ## Challenges
-Being able to execute all our user experience goals within the time frame turned out to be a challenge. For example, we were unable to implement alerts in our ejs files that would indicate to the user when they were logged out, not signed up with us, or had the incorrect username/password. Though, it provided a great learning experience for prioritizing the minimum functionalities we needed for our user to be able to enjoy our able. 
+Being able to execute all our user experience goals within the time frame turned out to be a challenge. For example, we were unable to implement alerts in our ejs files that would indicate to the user when they were logged out, not signed up with us, or had the incorrect username/password. Though, it provided a great learning experience for prioritizing the minimum functionalities we needed for our user to be able to enjoy our app. 
