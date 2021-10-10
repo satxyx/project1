@@ -2,6 +2,7 @@
 We've created a sleek, minimalistic journaling app. One that the user can find daily peace in as they express their thoughts and decompress through thoughtful, written meditation. 
 
 Heroku Link: https://nicole-satya-project.herokuapp.com/
+
 Demo Username: visitor
 Demo Password: guest
 
