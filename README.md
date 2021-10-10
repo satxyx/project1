@@ -4,6 +4,7 @@ We've created a sleek, minimalistic journaling app. One that the user can find d
 Heroku Link: https://nicole-satya-project.herokuapp.com/
 
 Demo Username: visitor
+
 Demo Password: guest
 
 ## Technologies Used
