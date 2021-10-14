@@ -12,6 +12,8 @@ Demo Password: guest
 * Figma - app design and mockups
 * Node.js
 * EJS
+* Express
+* MongoDB/Mongoose
 * Javascript
 * jQuery
 * Slick - plugin w/jQuery for carousel 
