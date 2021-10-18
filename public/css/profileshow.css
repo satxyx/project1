@@ -16,6 +16,15 @@ body {
     font-weight: lighter;
 }
 
+@media(max-width: 854px) {
+    body {
+      background: url('/img/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg') no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
 
 #content-wrapper {
     width: 500px;
